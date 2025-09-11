@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appkodak", "appkodak\appkodak.csproj", "{133BCCED-B3E0-46AB-AA84-B2EF58A78E12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{B128A9D5-ECD2-4778-9C05-1A0D2A430C99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{2BF151CE-A871-4FBE-8DA4-72B54A13718E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{133BCCED-B3E0-46AB-AA84-B2EF58A78E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{133BCCED-B3E0-46AB-AA84-B2EF58A78E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{133BCCED-B3E0-46AB-AA84-B2EF58A78E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{133BCCED-B3E0-46AB-AA84-B2EF58A78E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B128A9D5-ECD2-4778-9C05-1A0D2A430C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B128A9D5-ECD2-4778-9C05-1A0D2A430C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B128A9D5-ECD2-4778-9C05-1A0D2A430C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B128A9D5-ECD2-4778-9C05-1A0D2A430C99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BF151CE-A871-4FBE-8DA4-72B54A13718E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BF151CE-A871-4FBE-8DA4-72B54A13718E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BF151CE-A871-4FBE-8DA4-72B54A13718E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BF151CE-A871-4FBE-8DA4-72B54A13718E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E241374-99B5-4E34-8E93-91399F2F8A87}
+	EndGlobalSection
+EndGlobal
