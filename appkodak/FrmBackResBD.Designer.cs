@@ -32,8 +32,11 @@
             btnRestaurar = new Button();
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
-            txtEstado = new TextBox();
+            Opciones = new GroupBox();
+            rbtnBackupCompleto = new RadioButton();
+            rbtnSoloEsquema = new RadioButton();
+            rbtnSoloDatos = new RadioButton();
+            Opciones.SuspendLayout();
             SuspendLayout();
             // 
             // btnBackup
@@ -43,11 +46,11 @@
             btnBackup.FlatStyle = FlatStyle.Flat;
             btnBackup.Font = new Font("Dubai", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnBackup.ForeColor = Color.White;
-            btnBackup.Location = new Point(6, 95);
+            btnBackup.Location = new Point(12, 272);
             btnBackup.Name = "btnBackup";
             btnBackup.Size = new Size(266, 81);
             btnBackup.TabIndex = 9;
-            btnBackup.Text = "Backup";
+            btnBackup.Text = "Realizar Backup";
             btnBackup.UseVisualStyleBackColor = true;
             btnBackup.Click += btnBackup_Click;
             // 
@@ -58,7 +61,7 @@
             btnRestaurar.FlatStyle = FlatStyle.Flat;
             btnRestaurar.Font = new Font("Dubai", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRestaurar.ForeColor = Color.White;
-            btnRestaurar.Location = new Point(293, 95);
+            btnRestaurar.Location = new Point(351, 95);
             btnRestaurar.Name = "btnRestaurar";
             btnRestaurar.Size = new Size(266, 81);
             btnRestaurar.TabIndex = 10;
@@ -68,53 +71,92 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
             label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(71, 18);
+            label1.Location = new Point(60, 9);
             label1.Name = "label1";
-            label1.Size = new Size(137, 32);
+            label1.Size = new Size(169, 108);
             label1.TabIndex = 11;
-            label1.Text = "Realizar Backup";
+            label1.Text = "Realizar Backup De la base de datos";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.Transparent;
-            label2.Location = new Point(322, 32);
+            label2.Location = new Point(384, 32);
             label2.Name = "label2";
             label2.Size = new Size(209, 32);
             label2.TabIndex = 12;
             label2.Text = "Restaurar Base de Datos";
             // 
-            // label3
+            // Opciones
             // 
-            label3.AutoSize = true;
-            label3.ForeColor = Color.Transparent;
-            label3.Location = new Point(55, 50);
-            label3.Name = "label3";
-            label3.Size = new Size(169, 32);
-            label3.TabIndex = 13;
-            label3.Text = "de la Base de Datos";
+            Opciones.Controls.Add(rbtnBackupCompleto);
+            Opciones.Controls.Add(rbtnSoloEsquema);
+            Opciones.Controls.Add(rbtnSoloDatos);
+            Opciones.FlatStyle = FlatStyle.Flat;
+            Opciones.ForeColor = Color.LightSeaGreen;
+            Opciones.Location = new Point(12, 85);
+            Opciones.Name = "Opciones";
+            Opciones.Size = new Size(267, 175);
+            Opciones.TabIndex = 17;
+            Opciones.TabStop = false;
+            Opciones.Text = "Opciones de Backup";
             // 
-            // txtEstado
+            // rbtnBackupCompleto
             // 
-            txtEstado.BackColor = Color.FromArgb(40, 40, 40);
-            txtEstado.BorderStyle = BorderStyle.None;
-            txtEstado.ForeColor = Color.LightSeaGreen;
-            txtEstado.Location = new Point(12, 182);
-            txtEstado.Multiline = true;
-            txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(260, 187);
-            txtEstado.TabIndex = 14;
+            rbtnBackupCompleto.AutoSize = true;
+            rbtnBackupCompleto.Cursor = Cursors.Hand;
+            rbtnBackupCompleto.FlatAppearance.CheckedBackColor = Color.LightSeaGreen;
+            rbtnBackupCompleto.FlatStyle = FlatStyle.Flat;
+            rbtnBackupCompleto.ForeColor = Color.Transparent;
+            rbtnBackupCompleto.Location = new Point(16, 121);
+            rbtnBackupCompleto.Name = "rbtnBackupCompleto";
+            rbtnBackupCompleto.Size = new Size(169, 36);
+            rbtnBackupCompleto.TabIndex = 19;
+            rbtnBackupCompleto.TabStop = true;
+            rbtnBackupCompleto.Text = "Backup Completo";
+            rbtnBackupCompleto.UseVisualStyleBackColor = true;
+            rbtnBackupCompleto.CheckedChanged += rbtnBackupCompleto_CheckedChanged;
+            // 
+            // rbtnSoloEsquema
+            // 
+            rbtnSoloEsquema.AutoSize = true;
+            rbtnSoloEsquema.Cursor = Cursors.Hand;
+            rbtnSoloEsquema.FlatAppearance.CheckedBackColor = Color.LightSeaGreen;
+            rbtnSoloEsquema.FlatStyle = FlatStyle.Flat;
+            rbtnSoloEsquema.ForeColor = Color.Transparent;
+            rbtnSoloEsquema.Location = new Point(16, 78);
+            rbtnSoloEsquema.Name = "rbtnSoloEsquema";
+            rbtnSoloEsquema.Size = new Size(141, 36);
+            rbtnSoloEsquema.TabIndex = 18;
+            rbtnSoloEsquema.TabStop = true;
+            rbtnSoloEsquema.Text = "Solo Esquema";
+            rbtnSoloEsquema.UseVisualStyleBackColor = true;
+            rbtnSoloEsquema.CheckedChanged += rbtnBackupCompleto_CheckedChanged;
+            // 
+            // rbtnSoloDatos
+            // 
+            rbtnSoloDatos.AutoSize = true;
+            rbtnSoloDatos.Cursor = Cursors.Hand;
+            rbtnSoloDatos.FlatAppearance.CheckedBackColor = Color.LightSeaGreen;
+            rbtnSoloDatos.FlatStyle = FlatStyle.Flat;
+            rbtnSoloDatos.ForeColor = Color.Transparent;
+            rbtnSoloDatos.Location = new Point(16, 35);
+            rbtnSoloDatos.Name = "rbtnSoloDatos";
+            rbtnSoloDatos.Size = new Size(117, 36);
+            rbtnSoloDatos.TabIndex = 17;
+            rbtnSoloDatos.TabStop = true;
+            rbtnSoloDatos.Text = "Solo Datos";
+            rbtnSoloDatos.UseVisualStyleBackColor = true;
+            rbtnSoloDatos.CheckedChanged += rbtnBackupCompleto_CheckedChanged;
             // 
             // FrmBackResBD
             // 
             AutoScaleDimensions = new SizeF(10F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
-            ClientSize = new Size(585, 381);
-            Controls.Add(txtEstado);
-            Controls.Add(label3);
+            ClientSize = new Size(644, 381);
+            Controls.Add(Opciones);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnRestaurar);
@@ -124,6 +166,8 @@
             Margin = new Padding(4, 6, 4, 6);
             Name = "FrmBackResBD";
             Text = "FrmBackResBD";
+            Opciones.ResumeLayout(false);
+            Opciones.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -134,7 +178,9 @@
         private Button btnRestaurar;
         private Label label1;
         private Label label2;
-        private Label label3;
-        private TextBox txtEstado;
+        private GroupBox Opciones;
+        private RadioButton rbtnSoloDatos;
+        private RadioButton rbtnBackupCompleto;
+        private RadioButton rbtnSoloEsquema;
     }
 }

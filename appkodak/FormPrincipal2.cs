@@ -107,6 +107,26 @@ namespace appkodak
         private void btnBasedeDatos_Click(object sender, EventArgs e)
         {
             abrirFormularioHijo(new frmHerramientasBasedeDatos());
-        }  
+        }
+
+        private void FormPrincipal2_Load(object sender, EventArgs e)
+        { 
+            timer100ms.Start();
+            timer1min.Start();
+            timer100ms.Tick += TimerPrincipal_Tick;
+            timer1min.Tick += Timer1min_Tick;
+
+
+        }
+
+        private void Timer1min_Tick(object? sender, EventArgs e)
+        {
+           lblDia.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+        }
+
+        private void TimerPrincipal_Tick(object? sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt").ToUpper();
+        }
     }
 }

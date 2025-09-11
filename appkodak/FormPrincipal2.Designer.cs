@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             btnBasedeDatos = new Button();
             btnProbarConexion = new Button();
@@ -36,12 +37,19 @@
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
             panelVentana = new Panel();
+            lblHora = new Label();
             pbxNotificacion = new PictureBox();
+            timer100ms = new System.Windows.Forms.Timer(components);
+            timer1min = new System.Windows.Forms.Timer(components);
+            lblDia = new Label();
+            label1 = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelVentana.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxNotificacion).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -149,6 +157,8 @@
             // 
             // panelVentana
             // 
+            panelVentana.BackColor = Color.FromArgb(60, 60, 60);
+            panelVentana.Controls.Add(tableLayoutPanel1);
             panelVentana.Controls.Add(pbxNotificacion);
             panelVentana.Dock = DockStyle.Fill;
             panelVentana.Location = new Point(359, 0);
@@ -156,15 +166,76 @@
             panelVentana.Size = new Size(772, 666);
             panelVentana.TabIndex = 1;
             // 
+            // lblHora
+            // 
+            lblHora.Anchor = AnchorStyles.None;
+            lblHora.AutoSize = true;
+            lblHora.FlatStyle = FlatStyle.Flat;
+            lblHora.Font = new Font("Dubai", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHora.ForeColor = Color.Transparent;
+            lblHora.Location = new Point(138, 210);
+            lblHora.Name = "lblHora";
+            lblHora.Size = new Size(84, 49);
+            lblHora.TabIndex = 3;
+            lblHora.Text = "Hora";
+            lblHora.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // pbxNotificacion
             // 
-            pbxNotificacion.BackColor = SystemColors.Control;
-            pbxNotificacion.Location = new Point(233, 173);
+            pbxNotificacion.BackColor = Color.Transparent;
+            pbxNotificacion.Location = new Point(681, 587);
             pbxNotificacion.Name = "pbxNotificacion";
-            pbxNotificacion.Size = new Size(326, 225);
+            pbxNotificacion.Size = new Size(79, 67);
             pbxNotificacion.SizeMode = PictureBoxSizeMode.Zoom;
             pbxNotificacion.TabIndex = 0;
             pbxNotificacion.TabStop = false;
+            // 
+            // lblDia
+            // 
+            lblDia.Anchor = AnchorStyles.None;
+            lblDia.AutoSize = true;
+            lblDia.FlatStyle = FlatStyle.Flat;
+            lblDia.Font = new Font("Dubai", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDia.ForeColor = Color.Transparent;
+            lblDia.Location = new Point(133, 116);
+            lblDia.Name = "lblDia";
+            lblDia.Size = new Size(94, 49);
+            lblDia.TabIndex = 2;
+            lblDia.Text = "Fecha";
+            lblDia.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.FlatStyle = FlatStyle.Flat;
+            label1.Font = new Font("Dubai", 35.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Transparent;
+            label1.Location = new Point(38, 6);
+            label1.Name = "label1";
+            label1.Size = new Size(284, 81);
+            label1.TabIndex = 1;
+            label1.Text = "Bienvenidos";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.AutoSize = true;
+            tableLayoutPanel1.BackgroundImageLayout = ImageLayout.None;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(lblHora, 0, 2);
+            tableLayoutPanel1.Controls.Add(lblDia, 0, 1);
+            tableLayoutPanel1.Controls.Add(label1, 0, 0);
+            tableLayoutPanel1.Location = new Point(217, 90);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 4;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.Size = new Size(360, 376);
+            tableLayoutPanel1.TabIndex = 4;
             // 
             // FormPrincipal2
             // 
@@ -176,11 +247,15 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FormPrincipal2";
             Text = "FormPrincipal2";
+            Load += FormPrincipal2_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelVentana.ResumeLayout(false);
+            panelVentana.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbxNotificacion).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -195,5 +270,11 @@
         private PictureBox pbxNotificacion;
         private Button btnProbarConexion;
         private Button btnBasedeDatos;
+        private Label lblHora;
+        private System.Windows.Forms.Timer timer100ms;
+        private System.Windows.Forms.Timer timer1min;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label lblDia;
+        private Label label1;
     }
 }
