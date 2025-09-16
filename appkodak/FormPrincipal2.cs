@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using Dominio;
+using Microsoft.VisualBasic.ApplicationServices;
 using Negocio;
 using System;
 using System.Collections.Generic;
@@ -65,38 +66,34 @@ namespace appkodak
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CLientes cLientes = new CLientes();
-            cLientes.ShowDialog();
+          FrmProducto frmProducto = new FrmProducto();
+            frmProducto.ShowDialog();
         }
 
-        private void btnProbarConexion_Click(object sender, EventArgs e)
+        private async void btnProbarConexion_Click(object sender, EventArgs e)
         {
             try
             {
                 ConexionGeneral conexion = new ConexionGeneral();
                 if (conexion != null)
                 {
-                    pbxNotificacion.Load(@".\Icons8\ok.jpg");
-                    MessageBox.Show("Conexión exitosa a la base de datos.", conexion.estado().FullState.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
+                    pbxNotificacion.Load("./Icons8/ok.jpg");
+                    MessageBox.Show("Conexión exitosa a la base de datos.", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     pbxNotificacion.Load("./Icons8/no.jpg");
                     MessageBox.Show("Error al conectar a la base de datos.");
-
                 }
 
-                if (conexion.estado().FullState == System.Data.ConnectionState.Open)
+                var estadoConexion =   await conexion.Estado();
+                if (estadoConexion.conexion != null && estadoConexion.conexion.State == System.Data.ConnectionState.Open)
                 {
-                    conexion.cerrarConexion();
+                    conexion.Dispose();
                 }
             }
             catch (Exception)
             {
-
                 throw;
             }
 

@@ -37,19 +37,19 @@
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
             panelVentana = new Panel();
+            tableLayoutPanel1 = new TableLayoutPanel();
             lblHora = new Label();
+            lblDia = new Label();
+            label1 = new Label();
             pbxNotificacion = new PictureBox();
             timer100ms = new System.Windows.Forms.Timer(components);
             timer1min = new System.Windows.Forms.Timer(components);
-            lblDia = new Label();
-            label1 = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelVentana.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbxNotificacion).BeginInit();
             tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxNotificacion).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -109,12 +109,13 @@
             btnClientes.FlatStyle = FlatStyle.Flat;
             btnClientes.Font = new Font("Dubai", 14.2499981F);
             btnClientes.ForeColor = Color.LightSeaGreen;
+            btnClientes.Image = Properties.Resources.icons8_prismáticos_50;
+            btnClientes.ImageAlign = ContentAlignment.MiddleRight;
             btnClientes.Location = new Point(0, 157);
             btnClientes.Name = "btnClientes";
             btnClientes.Size = new Size(359, 67);
             btnClientes.TabIndex = 2;
-            btnClientes.Text = "Clientes";
-            btnClientes.TextImageRelation = TextImageRelation.TextBeforeImage;
+            btnClientes.Text = "Productos";
             btnClientes.UseVisualStyleBackColor = true;
             btnClientes.Click += button2_Click;
             // 
@@ -166,6 +167,25 @@
             panelVentana.Size = new Size(772, 666);
             panelVentana.TabIndex = 1;
             // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.AutoSize = true;
+            tableLayoutPanel1.BackgroundImageLayout = ImageLayout.None;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(lblHora, 0, 2);
+            tableLayoutPanel1.Controls.Add(lblDia, 0, 1);
+            tableLayoutPanel1.Controls.Add(label1, 0, 0);
+            tableLayoutPanel1.Location = new Point(217, 90);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 4;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.Size = new Size(360, 376);
+            tableLayoutPanel1.TabIndex = 4;
+            // 
             // lblHora
             // 
             lblHora.Anchor = AnchorStyles.None;
@@ -179,16 +199,6 @@
             lblHora.TabIndex = 3;
             lblHora.Text = "Hora";
             lblHora.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // pbxNotificacion
-            // 
-            pbxNotificacion.BackColor = Color.Transparent;
-            pbxNotificacion.Location = new Point(681, 587);
-            pbxNotificacion.Name = "pbxNotificacion";
-            pbxNotificacion.Size = new Size(79, 67);
-            pbxNotificacion.SizeMode = PictureBoxSizeMode.Zoom;
-            pbxNotificacion.TabIndex = 0;
-            pbxNotificacion.TabStop = false;
             // 
             // lblDia
             // 
@@ -218,24 +228,15 @@
             label1.Text = "Bienvenidos";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel1
+            // pbxNotificacion
             // 
-            tableLayoutPanel1.AutoSize = true;
-            tableLayoutPanel1.BackgroundImageLayout = ImageLayout.None;
-            tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(lblHora, 0, 2);
-            tableLayoutPanel1.Controls.Add(lblDia, 0, 1);
-            tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Location = new Point(217, 90);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 4;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Size = new Size(360, 376);
-            tableLayoutPanel1.TabIndex = 4;
+            pbxNotificacion.BackColor = Color.Transparent;
+            pbxNotificacion.Location = new Point(681, 587);
+            pbxNotificacion.Name = "pbxNotificacion";
+            pbxNotificacion.Size = new Size(79, 67);
+            pbxNotificacion.SizeMode = PictureBoxSizeMode.Zoom;
+            pbxNotificacion.TabIndex = 0;
+            pbxNotificacion.TabStop = false;
             // 
             // FormPrincipal2
             // 
@@ -253,9 +254,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelVentana.ResumeLayout(false);
             panelVentana.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbxNotificacion).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxNotificacion).EndInit();
             ResumeLayout(false);
         }
 

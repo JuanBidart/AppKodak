@@ -7,6 +7,9 @@
     <Compile Update="Colorselectionr.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormCargarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormPrincipal2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,6 +20,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmHerramientasBasedeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -56,7 +56,7 @@ namespace appkodak
             cargarPropiedades();
         }
 
-        private void btnProbarNuevaConexion_Click(object sender, EventArgs e)
+        private async void btnProbarNuevaConexion_Click(object sender, EventArgs e)
         {
             TextBox[] textBoxes = { txtHost, txtUsername, txtPassword, txtDatabase };
             foreach (var textBox in textBoxes)
@@ -66,32 +66,39 @@ namespace appkodak
                     MessageBox.Show("Por favor, complete todos los campos.", "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-
             }
             try
             {
-                ConexionGeneral conexionGeneral = new ConexionGeneral($"Host={txtHost.Text};Username={txtUsername.Text};Password={txtPassword.Text};Database={txtDatabase.Text}");
-                conexionGeneral.abrirConexion();
-                lblestadonuevo.Text = "¡¡¡ Conexión exitosa !!!";
-                lblestadonuevo.ForeColor = Color.LightSeaGreen;
-                conexionGeneral.cerrarConexion();
+                this.Cursor = Cursors.WaitCursor;
+               
+                bool prueba = false;
+                using (ConexionGeneral conexionGeneral = new ConexionGeneral($"Host={txtHost.Text};Username={txtUsername.Text};Password={txtPassword.Text};Database={txtDatabase.Text}"))
+                {
+                    prueba = await conexionGeneral.ProbarConexionAsync();
 
+                    if (prueba)
+                    {
+                        lblestadonuevo.Text = "¡¡¡ Conexión exitosa !!!";
+                        lblestadonuevo.ForeColor = Color.LightSeaGreen;
+                        this.Cursor = Cursors.Default;
+                    }
+                    else
+                    {
+                        var estado = await conexionGeneral.Estado();
+                        lblestadonuevo.Text = estado.errorMensaje ?? "Error desconocido";
+                        lblestadonuevo.ForeColor = Color.Red;
+                        this.Cursor = Cursors.Default;
+                    }
+                }
+             
             }
-
-
-
             catch (Exception ex)
             {
-                //MessageBox.Show("Error al conectar a la base de datos: " + ex.Message, "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                lblestadonuevo.Text = "Error " + ex.Message.ToString();
+                lblestadonuevo.Text = "Error " + ex.Message;
                 lblestadonuevo.ForeColor = Color.Red;
-                return;
-
+                this.Cursor = Cursors.Default;
             }
-
-
-
-
+            
         }
 
         private async void btnGuardarDatos_Click(object sender, EventArgs e)
@@ -110,34 +117,44 @@ namespace appkodak
             {
                 ConexionDatos conexionDatos = new ConexionDatos();
                 conexionDatos.guardarDatos(txtHost.Text, txtUsername.Text, txtPassword.Text, txtDatabase.Text);
-
+                MessageBox.Show("Datos guardados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)
             {
-                throw;
+                throw new Exception("Error al guardar los datos de conexión.");
             }
         }
 
-        private void btnProbarConExistente_Click(object sender, EventArgs e)
+        private async void btnProbarConExistente_Click(object sender, EventArgs e)
         {
             try
             {
-                ConexionGeneral conexionGeneral = new ConexionGeneral($"Host={host};Username={usuario};Password={password};Database={database}");
-                conexionGeneral.abrirConexion();
-                lblestadonuevo.Text = "¡¡¡ Conexión exitosa !!!";
-                lblestadonuevo.ForeColor = Color.LightSeaGreen;
-                conexionGeneral.cerrarConexion();
+                bool prueba = false;
+                // La clase ConexionGeneral es IDisposable, por lo que es mejor usar 'using'.
+                using (ConexionGeneral conexionGeneral = new ConexionGeneral($"Host={host};Username={usuario};Password={password};Database={database}"))
+                {
+                    // Ahora esperamos de forma asíncrona, sin bloquear el hilo de la UI.
+                    prueba = await conexionGeneral.ProbarConexionAsync();
 
+                    if (prueba)
+                    {
+                        lblestadonuevo.Text = "¡¡¡ Conexión exitosa !!!";
+                        lblestadonuevo.ForeColor = Color.LightSeaGreen;
+                    }
+                    else
+                    {
+                        lblestadonuevo.Text = "Error en la conexión";
+                        lblestadonuevo.ForeColor = Color.Red;
+                    }
+                } // 'using' se encarga de llamar a Dispose() automáticamente al salir.
             }
             catch (Exception ex)
             {
-                lblestadonuevo.Text = "Error " + ex.Message.ToString();
+                lblestadonuevo.Text = "Error " + ex.Message;
                 lblestadonuevo.ForeColor = Color.Red;
-                return;
             }
-            
         }
 
-       
+
     }
 }
