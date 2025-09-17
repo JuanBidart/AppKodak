@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace appkodak
 {
-    public partial class FormCargarProducto : Form
+    public partial class FrmHerramientasProveedores : Form
     {
-        public FormCargarProducto()
+        public FrmHerramientasProveedores()
         {
             InitializeComponent();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

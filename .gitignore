@@ -6,5 +6,6 @@
 **/obj/
 
 # Otros archivos que no necesitas subir (ej: secretos, logs, etc.)
+iconosc.psd
 # .env
 # *.log

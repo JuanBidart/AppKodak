@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -66,8 +67,39 @@ namespace appkodak
 
         private void button2_Click(object sender, EventArgs e)
         {
-          FrmProducto frmProducto = new FrmProducto();
-            frmProducto.ShowDialog();
+            FrmHerramientasdeProductos frmHerramientasProductos = new FrmHerramientasdeProductos();
+            abrirFormularioHijo(frmHerramientasProductos);
+        }
+
+
+        private void btnBasedeDatos_Click(object sender, EventArgs e)
+        {
+            abrirFormularioHijo(new frmHerramientasBasedeDatos());
+        }
+
+        private void FormPrincipal2_Load(object sender, EventArgs e)
+        {
+            timer100ms.Start();
+            timer100ms.Tick += TimerPrincipal_Tick;
+            lblDia.Text = DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy").ToUpper();
+
+        }
+
+        private void Timer1min_Tick(object? sender, EventArgs e)
+        {
+
+        }
+
+        private void TimerPrincipal_Tick(object? sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt").ToUpper();
+            DateTime Timeapp = DateTime.ParseExact(lblDia.Text, "dddd, dd 'DE' MMMM 'DE' yyyy", new CultureInfo("Es-ar"));
+
+            if (DateTime.Now.Day != Timeapp.Day)
+            {
+
+                lblDia.Text = DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy").ToUpper();
+            }
         }
 
         private async void btnProbarConexion_Click(object sender, EventArgs e)
@@ -77,16 +109,14 @@ namespace appkodak
                 ConexionGeneral conexion = new ConexionGeneral();
                 if (conexion != null)
                 {
-                    pbxNotificacion.Load("./Icons8/ok.jpg");
                     MessageBox.Show("Conexión exitosa a la base de datos.", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    pbxNotificacion.Load("./Icons8/no.jpg");
                     MessageBox.Show("Error al conectar a la base de datos.");
                 }
 
-                var estadoConexion =   await conexion.Estado();
+                var estadoConexion = await conexion.Estado();
                 if (estadoConexion.conexion != null && estadoConexion.conexion.State == System.Data.ConnectionState.Open)
                 {
                     conexion.Dispose();
@@ -96,34 +126,21 @@ namespace appkodak
             {
                 throw;
             }
-
-
-
         }
 
-        private void btnBasedeDatos_Click(object sender, EventArgs e)
+        private void bbtnProveedores_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new frmHerramientasBasedeDatos());
+            FrmHerramientasProveedores frmHerramientasProveedores = new FrmHerramientasProveedores();
+            abrirFormularioHijo(frmHerramientasProveedores);
         }
 
-        private void FormPrincipal2_Load(object sender, EventArgs e)
-        { 
-            timer100ms.Start();
-            timer1min.Start();
-            timer100ms.Tick += TimerPrincipal_Tick;
-            timer1min.Tick += Timer1min_Tick;
-
-
-        }
-
-        private void Timer1min_Tick(object? sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-           lblDia.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");
-        }
-
-        private void TimerPrincipal_Tick(object? sender, EventArgs e)
-        {
-            lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt").ToUpper();
+            MessageBox.Show("Cerrando la aplicación", "Salir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Dispose();
+            ConexionGeneral conexionGeneral = new ConexionGeneral();
+            conexionGeneral.Dispose();
+            this.Close();
         }
     }
 }

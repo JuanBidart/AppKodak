@@ -30,6 +30,7 @@
         {
             btnCerrar = new Button();
             panel1 = new Panel();
+            lblTitulo = new Label();
             btnDatosCOnexion = new Button();
             btnBackup = new Button();
             panel1.SuspendLayout();
@@ -42,10 +43,10 @@
             btnCerrar.FlatStyle = FlatStyle.Flat;
             btnCerrar.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCerrar.ForeColor = Color.Transparent;
-            btnCerrar.Location = new Point(722, 0);
+            btnCerrar.Location = new Point(719, 0);
             btnCerrar.Margin = new Padding(10, 3, 3, 3);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(34, 32);
+            btnCerrar.Size = new Size(37, 32);
             btnCerrar.TabIndex = 0;
             btnCerrar.Text = "X";
             btnCerrar.UseVisualStyleBackColor = true;
@@ -54,6 +55,7 @@
             // panel1
             // 
             panel1.BackColor = Color.LightSeaGreen;
+            panel1.Controls.Add(lblTitulo);
             panel1.Controls.Add(btnCerrar);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -61,9 +63,21 @@
             panel1.Size = new Size(756, 32);
             panel1.TabIndex = 1;
             // 
+            // lblTitulo
+            // 
+            lblTitulo.Anchor = AnchorStyles.None;
+            lblTitulo.AutoSize = true;
+            lblTitulo.ForeColor = Color.FromArgb(40, 40, 40);
+            lblTitulo.Location = new Point(284, 9);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(170, 15);
+            lblTitulo.TabIndex = 1;
+            lblTitulo.Text = "Herramientas de Base de Datos";
+            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // btnDatosCOnexion
             // 
-            btnDatosCOnexion.FlatAppearance.BorderColor = Color.White;
+            btnDatosCOnexion.FlatAppearance.BorderColor = Color.FromArgb(179, 82, 32);
             btnDatosCOnexion.FlatAppearance.MouseOverBackColor = Color.LightSeaGreen;
             btnDatosCOnexion.FlatStyle = FlatStyle.Flat;
             btnDatosCOnexion.Font = new Font("Dubai", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -78,7 +92,7 @@
             // 
             // btnBackup
             // 
-            btnBackup.FlatAppearance.BorderColor = Color.White;
+            btnBackup.FlatAppearance.BorderColor = Color.FromArgb(179, 82, 32);
             btnBackup.FlatAppearance.MouseOverBackColor = Color.LightSeaGreen;
             btnBackup.FlatStyle = FlatStyle.Flat;
             btnBackup.Font = new Font("Dubai", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -104,6 +118,7 @@
             Name = "frmHerramientasBasedeDatos";
             Text = "frmHerramientasBasedeDatos";
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -111,6 +126,7 @@
 
         private Button btnCerrar;
         private Panel panel1;
+        private Label lblTitulo;
         private Button btnDatosCOnexion;
         private Button btnBackup;
     }

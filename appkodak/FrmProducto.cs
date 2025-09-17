@@ -27,7 +27,7 @@ namespace appkodak
 
         private void btnCargarProducto_Click(object sender, EventArgs e)
         {
-            FormCargarProducto cargarProducto = new FormCargarProducto();
+            FrmCargarProducto cargarProducto = new FrmCargarProducto();
             cargarProducto.ShowDialog();
         }
     }

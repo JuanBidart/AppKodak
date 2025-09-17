@@ -7,7 +7,7 @@
     <Compile Update="Colorselectionr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormCargarProducto.cs">
+    <Compile Update="FrmCargarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormPrincipal2.cs">
@@ -16,10 +16,19 @@
     <Compile Update="FrmBackResBD.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmCargaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmHerramientasProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmDatosConexionBasedeDatos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmHerramientasBasedeDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmHerramientasdeProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmProducto.cs">

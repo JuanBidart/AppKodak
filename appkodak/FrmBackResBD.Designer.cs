@@ -165,7 +165,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(4, 6, 4, 6);
             Name = "FrmBackResBD";
-            Text = "FrmBackResBD";
+            Text = "Backup / Restauración";
             Opciones.ResumeLayout(false);
             Opciones.PerformLayout();
             ResumeLayout(false);
