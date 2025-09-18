@@ -33,5 +33,11 @@ namespace appkodak
             FrmBackResBD frmBackup = new FrmBackResBD();
             frmBackup.ShowDialog();
         }
+
+        private void btnEjecutaConsultas_Click(object sender, EventArgs e)
+        {
+            FrmEjecutarSentenciaSql frmEjecutarSentenciaSql = new FrmEjecutarSentenciaSql();
+            frmEjecutarSentenciaSql.ShowDialog();
+        }
     }
 }

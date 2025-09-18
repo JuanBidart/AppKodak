@@ -19,6 +19,9 @@
     <Compile Update="FrmCargaProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmEjecutarSentenciaSql.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmHerramientasProveedores.cs">
       <SubType>Form</SubType>
     </Compile>

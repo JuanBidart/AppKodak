@@ -21,5 +21,11 @@ namespace appkodak
         {
             this.Close();
         }
+
+        private void btnCargarProveedores_Click(object sender, EventArgs e)
+        {
+            FrmCargaProveedores frmCargaProveedores = new FrmCargaProveedores();
+            frmCargaProveedores.ShowDialog();
+        }
     }
 }

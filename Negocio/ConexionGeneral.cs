@@ -158,7 +158,8 @@ namespace Negocio
                 if (resultado == null || resultado == DBNull.Value)
                     return default(T);
 
-                return (T)resultado;
+                return (T)Convert.ChangeType(resultado, typeof(T));
+
             }
             catch (Exception ex)
             {

@@ -28,25 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblNuevoProveedor = new Label();
             groupBox1 = new GroupBox();
-            textBox4 = new TextBox();
+            txtIva = new TextBox();
             label1 = new Label();
-            textBox3 = new TextBox();
+            txtWeb = new TextBox();
             label8 = new Label();
-            textBox2 = new TextBox();
+            txtTelefonoSec = new TextBox();
             label7 = new Label();
-            textBox1 = new TextBox();
+            txtTelefonoP = new TextBox();
             label6 = new Label();
-            txtDatabase = new TextBox();
-            txtPassword = new TextBox();
-            txtUsername = new TextBox();
+            txtEmail = new TextBox();
+            txtDireccion = new TextBox();
+            txtCiudad = new TextBox();
             txtNombre = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label5 = new Label();
+            btnGuardar = new Button();
+            btnSalir = new Button();
+            errorProvider1 = new ErrorProvider(components);
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // lblNuevoProveedor
@@ -57,24 +62,24 @@
             lblNuevoProveedor.ForeColor = Color.LightSeaGreen;
             lblNuevoProveedor.Location = new Point(182, 9);
             lblNuevoProveedor.Name = "lblNuevoProveedor";
-            lblNuevoProveedor.Size = new Size(289, 57);
+            lblNuevoProveedor.Size = new Size(287, 57);
             lblNuevoProveedor.TabIndex = 12;
-            lblNuevoProveedor.Text = "Nuevo Provedoor";
+            lblNuevoProveedor.Text = "Nuevo Proveedor";
             lblNuevoProveedor.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(txtIva);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(txtWeb);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(txtTelefonoSec);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txtTelefonoP);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(txtDatabase);
-            groupBox1.Controls.Add(txtPassword);
-            groupBox1.Controls.Add(txtUsername);
+            groupBox1.Controls.Add(txtEmail);
+            groupBox1.Controls.Add(txtDireccion);
+            groupBox1.Controls.Add(txtCiudad);
             groupBox1.Controls.Add(txtNombre);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
@@ -84,21 +89,22 @@
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(41, 69);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(570, 516);
+            groupBox1.Size = new Size(570, 501);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Agregar Proveedor";
             // 
-            // textBox4
+            // txtIva
             // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.ForeColor = Color.LightSeaGreen;
-            textBox4.Location = new Point(210, 438);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Alicuota del Iva";
-            textBox4.Size = new Size(302, 33);
-            textBox4.TabIndex = 15;
+            txtIva.BorderStyle = BorderStyle.None;
+            txtIva.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtIva.ForeColor = Color.LightSeaGreen;
+            txtIva.Location = new Point(210, 438);
+            txtIva.Name = "txtIva";
+            txtIva.PlaceholderText = "Alicuota del Iva";
+            txtIva.Size = new Size(302, 33);
+            txtIva.TabIndex = 15;
+            txtIva.KeyPress += txtIva_KeyPress;
             // 
             // label1
             // 
@@ -111,16 +117,16 @@
             label1.TabIndex = 14;
             label1.Text = "Iva:";
             // 
-            // textBox3
+            // txtWeb
             // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.ForeColor = Color.LightSeaGreen;
-            textBox3.Location = new Point(210, 389);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Pagina Web del proveedor";
-            textBox3.Size = new Size(302, 33);
-            textBox3.TabIndex = 13;
+            txtWeb.BorderStyle = BorderStyle.None;
+            txtWeb.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtWeb.ForeColor = Color.LightSeaGreen;
+            txtWeb.Location = new Point(210, 389);
+            txtWeb.Name = "txtWeb";
+            txtWeb.PlaceholderText = "Pagina Web del proveedor";
+            txtWeb.Size = new Size(302, 33);
+            txtWeb.TabIndex = 13;
             // 
             // label8
             // 
@@ -133,16 +139,16 @@
             label8.TabIndex = 12;
             label8.Text = "Pagina Web:";
             // 
-            // textBox2
+            // txtTelefonoSec
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.ForeColor = Color.LightSeaGreen;
-            textBox2.Location = new Point(210, 336);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Telefono2";
-            textBox2.Size = new Size(302, 33);
-            textBox2.TabIndex = 11;
+            txtTelefonoSec.BorderStyle = BorderStyle.None;
+            txtTelefonoSec.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTelefonoSec.ForeColor = Color.LightSeaGreen;
+            txtTelefonoSec.Location = new Point(210, 336);
+            txtTelefonoSec.Name = "txtTelefonoSec";
+            txtTelefonoSec.PlaceholderText = "Telefono2";
+            txtTelefonoSec.Size = new Size(302, 33);
+            txtTelefonoSec.TabIndex = 11;
             // 
             // label7
             // 
@@ -155,16 +161,16 @@
             label7.TabIndex = 10;
             label7.Text = "Teléfono Secundario:";
             // 
-            // textBox1
+            // txtTelefonoP
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.LightSeaGreen;
-            textBox1.Location = new Point(210, 283);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Numero de teléfono";
-            textBox1.Size = new Size(302, 33);
-            textBox1.TabIndex = 9;
+            txtTelefonoP.BorderStyle = BorderStyle.None;
+            txtTelefonoP.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTelefonoP.ForeColor = Color.LightSeaGreen;
+            txtTelefonoP.Location = new Point(210, 283);
+            txtTelefonoP.Name = "txtTelefonoP";
+            txtTelefonoP.PlaceholderText = "Numero de teléfono";
+            txtTelefonoP.Size = new Size(302, 33);
+            txtTelefonoP.TabIndex = 9;
             // 
             // label6
             // 
@@ -177,38 +183,38 @@
             label6.TabIndex = 8;
             label6.Text = "Teléfono Principal:";
             // 
-            // txtDatabase
+            // txtEmail
             // 
-            txtDatabase.BorderStyle = BorderStyle.None;
-            txtDatabase.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDatabase.ForeColor = Color.LightSeaGreen;
-            txtDatabase.Location = new Point(210, 230);
-            txtDatabase.Name = "txtDatabase";
-            txtDatabase.PlaceholderText = "E-mail del proveedor";
-            txtDatabase.Size = new Size(302, 33);
-            txtDatabase.TabIndex = 7;
+            txtEmail.BorderStyle = BorderStyle.None;
+            txtEmail.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmail.ForeColor = Color.LightSeaGreen;
+            txtEmail.Location = new Point(210, 230);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PlaceholderText = "E-mail del proveedor";
+            txtEmail.Size = new Size(302, 33);
+            txtEmail.TabIndex = 7;
             // 
-            // txtPassword
+            // txtDireccion
             // 
-            txtPassword.BorderStyle = BorderStyle.None;
-            txtPassword.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.ForeColor = Color.LightSeaGreen;
-            txtPassword.Location = new Point(210, 177);
-            txtPassword.Name = "txtPassword";
-            txtPassword.PlaceholderText = "DIrección";
-            txtPassword.Size = new Size(302, 33);
-            txtPassword.TabIndex = 6;
+            txtDireccion.BorderStyle = BorderStyle.None;
+            txtDireccion.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDireccion.ForeColor = Color.LightSeaGreen;
+            txtDireccion.Location = new Point(210, 177);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.PlaceholderText = "Dirección";
+            txtDireccion.Size = new Size(302, 33);
+            txtDireccion.TabIndex = 6;
             // 
-            // txtUsername
+            // txtCiudad
             // 
-            txtUsername.BorderStyle = BorderStyle.None;
-            txtUsername.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.ForeColor = Color.LightSeaGreen;
-            txtUsername.Location = new Point(210, 124);
-            txtUsername.Name = "txtUsername";
-            txtUsername.PlaceholderText = "Ciudad del Proveedor";
-            txtUsername.Size = new Size(302, 33);
-            txtUsername.TabIndex = 5;
+            txtCiudad.BorderStyle = BorderStyle.None;
+            txtCiudad.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCiudad.ForeColor = Color.LightSeaGreen;
+            txtCiudad.Location = new Point(210, 124);
+            txtCiudad.Name = "txtCiudad";
+            txtCiudad.PlaceholderText = "Ciudad del Proveedor";
+            txtCiudad.Size = new Size(302, 33);
+            txtCiudad.TabIndex = 5;
             // 
             // txtNombre
             // 
@@ -265,12 +271,48 @@
             label5.TabIndex = 0;
             label5.Text = "Nombre:";
             // 
+            // btnGuardar
+            // 
+            btnGuardar.FlatAppearance.BorderColor = Color.FromArgb(180, 80, 30);
+            btnGuardar.FlatAppearance.MouseOverBackColor = Color.LightSeaGreen;
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.Font = new Font("Dubai", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.Location = new Point(41, 588);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(266, 81);
+            btnGuardar.TabIndex = 14;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // btnSalir
+            // 
+            btnSalir.FlatAppearance.BorderColor = Color.FromArgb(180, 80, 30);
+            btnSalir.FlatAppearance.MouseOverBackColor = Color.LightSeaGreen;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.Font = new Font("Dubai", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSalir.ForeColor = Color.White;
+            btnSalir.Location = new Point(345, 588);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(266, 81);
+            btnSalir.TabIndex = 15;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // FrmCargaProveedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
-            ClientSize = new Size(647, 621);
+            ClientSize = new Size(647, 697);
+            Controls.Add(btnSalir);
+            Controls.Add(btnGuardar);
             Controls.Add(groupBox1);
             Controls.Add(lblNuevoProveedor);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -278,6 +320,7 @@
             Text = "FrmCargaProveedores";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -286,21 +329,24 @@
 
         private Label lblNuevoProveedor;
         private GroupBox groupBox1;
-        private TextBox textBox3;
+        private TextBox txtWeb;
         private Label label8;
-        private TextBox textBox2;
+        private TextBox txtTelefonoSec;
         private Label label7;
-        private TextBox textBox1;
+        private TextBox txtTelefonoP;
         private Label label6;
-        private TextBox txtDatabase;
-        private TextBox txtPassword;
-        private TextBox txtUsername;
+        private TextBox txtEmail;
+        private TextBox txtDireccion;
+        private TextBox txtCiudad;
         private TextBox txtNombre;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label5;
-        private TextBox textBox4;
+        private TextBox txtIva;
         private Label label1;
+        private Button btnGuardar;
+        private Button btnSalir;
+        private ErrorProvider errorProvider1;
     }
 }

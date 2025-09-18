@@ -129,6 +129,7 @@
             btnCargarProveedores.TabIndex = 6;
             btnCargarProveedores.Text = "Cargar Proveedores";
             btnCargarProveedores.UseVisualStyleBackColor = true;
+            btnCargarProveedores.Click += btnCargarProveedores_Click;
             // 
             // FrmHerramientasProveedores
             // 

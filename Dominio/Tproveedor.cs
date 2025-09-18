@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Tprovedor
+    public class Tproveedor
     {
         public long Id { get; set; }
         public string Nombre { get; set; } = string.Empty;
@@ -17,5 +17,6 @@ namespace Dominio
         public string? Telefono2 { get; set; }
         public string? PaginaWeb { get; set; }
         public decimal? Iva { get; set; }
+        public bool Activo { get; set; } = true;
     }
 }

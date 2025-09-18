@@ -33,6 +33,7 @@
             lblTitulo = new Label();
             btnDatosCOnexion = new Button();
             btnBackup = new Button();
+            btnEjecutaConsultas = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -105,12 +106,28 @@
             btnBackup.UseVisualStyleBackColor = true;
             btnBackup.Click += btnBackup_Click;
             // 
+            // btnEjecutaConsultas
+            // 
+            btnEjecutaConsultas.FlatAppearance.BorderColor = Color.FromArgb(179, 82, 32);
+            btnEjecutaConsultas.FlatAppearance.MouseOverBackColor = Color.LightSeaGreen;
+            btnEjecutaConsultas.FlatStyle = FlatStyle.Flat;
+            btnEjecutaConsultas.Font = new Font("Dubai", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEjecutaConsultas.ForeColor = Color.Transparent;
+            btnEjecutaConsultas.Location = new Point(12, 302);
+            btnEjecutaConsultas.Name = "btnEjecutaConsultas";
+            btnEjecutaConsultas.Size = new Size(359, 216);
+            btnEjecutaConsultas.TabIndex = 4;
+            btnEjecutaConsultas.Text = "Ejecutar Consultas SQL";
+            btnEjecutaConsultas.UseVisualStyleBackColor = true;
+            btnEjecutaConsultas.Click += btnEjecutaConsultas_Click;
+            // 
             // frmHerramientasBasedeDatos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
             ClientSize = new Size(756, 627);
+            Controls.Add(btnEjecutaConsultas);
             Controls.Add(btnBackup);
             Controls.Add(btnDatosCOnexion);
             Controls.Add(panel1);
@@ -129,5 +146,6 @@
         private Label lblTitulo;
         private Button btnDatosCOnexion;
         private Button btnBackup;
+        private Button btnEjecutaConsultas;
     }
 }
