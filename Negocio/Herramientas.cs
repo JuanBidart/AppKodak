@@ -6,10 +6,31 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
+
+
+
+
+
 namespace Negocio
 {
     public static class Herramientas
     {
+        public static bool ValidarNumeros(string textBox) 
+        {
+            char ultimo = textBox.Last();
+            
+            
+                if (Char.IsDigit(ultimo))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+                                   
+
+        }
 
 
 

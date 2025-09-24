@@ -115,6 +115,7 @@
             btnDatosCompletos.TabIndex = 5;
             btnDatosCompletos.Text = "Ver Proveedores";
             btnDatosCompletos.UseVisualStyleBackColor = true;
+            btnDatosCompletos.Click += btnDatosCompletos_Click;
             // 
             // btnCargarProveedores
             // 

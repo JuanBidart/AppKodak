@@ -99,7 +99,7 @@
             txtIva.BorderStyle = BorderStyle.None;
             txtIva.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtIva.ForeColor = Color.LightSeaGreen;
-            txtIva.Location = new Point(210, 438);
+            txtIva.Location = new Point(210, 429);
             txtIva.Name = "txtIva";
             txtIva.PlaceholderText = "Alicuota del Iva";
             txtIva.Size = new Size(302, 33);
@@ -111,7 +111,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Dubai", 15.75F);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(164, 438);
+            label1.Location = new Point(164, 429);
             label1.Name = "label1";
             label1.Size = new Size(43, 36);
             label1.TabIndex = 14;
@@ -122,7 +122,7 @@
             txtWeb.BorderStyle = BorderStyle.None;
             txtWeb.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtWeb.ForeColor = Color.LightSeaGreen;
-            txtWeb.Location = new Point(210, 389);
+            txtWeb.Location = new Point(210, 380);
             txtWeb.Name = "txtWeb";
             txtWeb.PlaceholderText = "Pagina Web del proveedor";
             txtWeb.Size = new Size(302, 33);
@@ -133,7 +133,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Dubai", 15.75F);
             label8.ForeColor = SystemColors.Control;
-            label8.Location = new Point(85, 389);
+            label8.Location = new Point(85, 380);
             label8.Name = "label8";
             label8.Size = new Size(122, 36);
             label8.TabIndex = 12;
@@ -144,7 +144,7 @@
             txtTelefonoSec.BorderStyle = BorderStyle.None;
             txtTelefonoSec.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTelefonoSec.ForeColor = Color.LightSeaGreen;
-            txtTelefonoSec.Location = new Point(210, 336);
+            txtTelefonoSec.Location = new Point(210, 327);
             txtTelefonoSec.Name = "txtTelefonoSec";
             txtTelefonoSec.PlaceholderText = "Telefono2";
             txtTelefonoSec.Size = new Size(302, 33);
@@ -155,7 +155,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Dubai", 15.75F);
             label7.ForeColor = SystemColors.Control;
-            label7.Location = new Point(8, 333);
+            label7.Location = new Point(8, 324);
             label7.Name = "label7";
             label7.Size = new Size(199, 36);
             label7.TabIndex = 10;
@@ -166,7 +166,7 @@
             txtTelefonoP.BorderStyle = BorderStyle.None;
             txtTelefonoP.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTelefonoP.ForeColor = Color.LightSeaGreen;
-            txtTelefonoP.Location = new Point(210, 283);
+            txtTelefonoP.Location = new Point(210, 274);
             txtTelefonoP.Name = "txtTelefonoP";
             txtTelefonoP.PlaceholderText = "Numero de teléfono";
             txtTelefonoP.Size = new Size(302, 33);
@@ -177,7 +177,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Dubai", 15.75F);
             label6.ForeColor = SystemColors.Control;
-            label6.Location = new Point(30, 283);
+            label6.Location = new Point(30, 274);
             label6.Name = "label6";
             label6.Size = new Size(177, 36);
             label6.TabIndex = 8;
@@ -188,7 +188,7 @@
             txtEmail.BorderStyle = BorderStyle.None;
             txtEmail.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEmail.ForeColor = Color.LightSeaGreen;
-            txtEmail.Location = new Point(210, 230);
+            txtEmail.Location = new Point(210, 221);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "E-mail del proveedor";
             txtEmail.Size = new Size(302, 33);
@@ -199,7 +199,7 @@
             txtDireccion.BorderStyle = BorderStyle.None;
             txtDireccion.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDireccion.ForeColor = Color.LightSeaGreen;
-            txtDireccion.Location = new Point(210, 177);
+            txtDireccion.Location = new Point(210, 168);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.PlaceholderText = "Dirección";
             txtDireccion.Size = new Size(302, 33);
@@ -210,7 +210,7 @@
             txtCiudad.BorderStyle = BorderStyle.None;
             txtCiudad.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCiudad.ForeColor = Color.LightSeaGreen;
-            txtCiudad.Location = new Point(210, 124);
+            txtCiudad.Location = new Point(210, 115);
             txtCiudad.Name = "txtCiudad";
             txtCiudad.PlaceholderText = "Ciudad del Proveedor";
             txtCiudad.Size = new Size(302, 33);
@@ -221,7 +221,7 @@
             txtNombre.BorderStyle = BorderStyle.None;
             txtNombre.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombre.ForeColor = Color.LightSeaGreen;
-            txtNombre.Location = new Point(210, 71);
+            txtNombre.Location = new Point(210, 62);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Razón Social";
             txtNombre.Size = new Size(302, 33);
@@ -232,7 +232,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Dubai", 15.75F);
             label4.ForeColor = SystemColors.Control;
-            label4.Location = new Point(141, 229);
+            label4.Location = new Point(141, 220);
             label4.Name = "label4";
             label4.Size = new Size(66, 36);
             label4.TabIndex = 3;
@@ -243,7 +243,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Dubai", 15.75F);
             label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(106, 176);
+            label3.Location = new Point(106, 167);
             label3.Name = "label3";
             label3.Size = new Size(101, 36);
             label3.TabIndex = 2;
@@ -254,7 +254,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Dubai", 15.75F);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(128, 123);
+            label2.Location = new Point(128, 114);
             label2.Name = "label2";
             label2.Size = new Size(79, 36);
             label2.TabIndex = 1;
@@ -265,7 +265,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Dubai", 15.75F);
             label5.ForeColor = SystemColors.Control;
-            label5.Location = new Point(117, 70);
+            label5.Location = new Point(117, 61);
             label5.Name = "label5";
             label5.Size = new Size(90, 36);
             label5.TabIndex = 0;

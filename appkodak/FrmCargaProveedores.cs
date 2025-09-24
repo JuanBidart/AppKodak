@@ -27,7 +27,7 @@ namespace appkodak
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNombre.Text)|| string.IsNullOrEmpty(txtIva.Text))
+            if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 MessageBox.Show("El campo Nombre es obligatorio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -45,7 +45,7 @@ namespace appkodak
                     tproveedor.Telefono1 = txtTelefonoP.Text;
                     tproveedor.Telefono2 = txtTelefonoSec.Text;
                     tproveedor.PaginaWeb = txtWeb.Text;
-                    tproveedor.Iva = Convert.ToDecimal(txtIva.Text);
+                    tproveedor.Iva = ( !string.IsNullOrEmpty(txtIva.Text)) ? decimal.Parse("0.0") : Convert.ToDecimal(txtIva.Text);
 
 
                     ConexionProveedores.InsertarAsync(tproveedor);

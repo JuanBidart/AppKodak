@@ -31,18 +31,18 @@
             btnGUardar = new Button();
             label1 = new Label();
             groupBox1 = new GroupBox();
-            textBox4 = new TextBox();
+            txtObservacion = new TextBox();
             label9 = new Label();
-            textBox3 = new TextBox();
+            txtMarca = new TextBox();
             label8 = new Label();
-            textBox2 = new TextBox();
+            txtIva = new TextBox();
             label7 = new Label();
-            textBox1 = new TextBox();
+            txtStock = new TextBox();
             label6 = new Label();
-            txtDatabase = new TextBox();
-            txtPassword = new TextBox();
-            txtUsername = new TextBox();
-            txtHost = new TextBox();
+            txtFecha = new TextBox();
+            txtRecargo = new TextBox();
+            txtDescripcion = new TextBox();
+            txtCodigo = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -64,6 +64,7 @@
             btnGUardar.TabIndex = 10;
             btnGUardar.Text = "Guardar";
             btnGUardar.UseVisualStyleBackColor = true;
+            btnGUardar.Click += btnGUardar_Click;
             // 
             // label1
             // 
@@ -80,18 +81,18 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(txtObservacion);
             groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(txtMarca);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(txtIva);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txtStock);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(txtDatabase);
-            groupBox1.Controls.Add(txtPassword);
-            groupBox1.Controls.Add(txtUsername);
-            groupBox1.Controls.Add(txtHost);
+            groupBox1.Controls.Add(txtFecha);
+            groupBox1.Controls.Add(txtRecargo);
+            groupBox1.Controls.Add(txtDescripcion);
+            groupBox1.Controls.Add(txtCodigo);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
@@ -105,16 +106,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Producto Nuevo";
             // 
-            // textBox4
+            // txtObservacion
             // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.ForeColor = Color.LightSeaGreen;
-            textBox4.Location = new Point(168, 420);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Datos que complementan";
-            textBox4.Size = new Size(304, 33);
-            textBox4.TabIndex = 15;
+            txtObservacion.BorderStyle = BorderStyle.None;
+            txtObservacion.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtObservacion.ForeColor = Color.LightSeaGreen;
+            txtObservacion.Location = new Point(168, 420);
+            txtObservacion.Name = "txtObservacion";
+            txtObservacion.PlaceholderText = "Datos que complementan";
+            txtObservacion.Size = new Size(304, 33);
+            txtObservacion.TabIndex = 15;
             // 
             // label9
             // 
@@ -127,16 +128,16 @@
             label9.TabIndex = 14;
             label9.Text = "Observación:";
             // 
-            // textBox3
+            // txtMarca
             // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.ForeColor = Color.LightSeaGreen;
-            textBox3.Location = new Point(168, 367);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Marca del producto";
-            textBox3.Size = new Size(304, 33);
-            textBox3.TabIndex = 13;
+            txtMarca.BorderStyle = BorderStyle.None;
+            txtMarca.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMarca.ForeColor = Color.LightSeaGreen;
+            txtMarca.Location = new Point(168, 367);
+            txtMarca.Name = "txtMarca";
+            txtMarca.PlaceholderText = "Marca del producto";
+            txtMarca.Size = new Size(304, 33);
+            txtMarca.TabIndex = 13;
             // 
             // label8
             // 
@@ -149,16 +150,16 @@
             label8.TabIndex = 12;
             label8.Text = "Marca:";
             // 
-            // textBox2
+            // txtIva
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.ForeColor = Color.LightSeaGreen;
-            textBox2.Location = new Point(168, 314);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Iva";
-            textBox2.Size = new Size(304, 33);
-            textBox2.TabIndex = 11;
+            txtIva.BorderStyle = BorderStyle.None;
+            txtIva.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtIva.ForeColor = Color.LightSeaGreen;
+            txtIva.Location = new Point(168, 314);
+            txtIva.Name = "txtIva";
+            txtIva.PlaceholderText = "Iva";
+            txtIva.Size = new Size(304, 33);
+            txtIva.TabIndex = 11;
             // 
             // label7
             // 
@@ -171,16 +172,16 @@
             label7.TabIndex = 10;
             label7.Text = "Iva:";
             // 
-            // textBox1
+            // txtStock
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.LightSeaGreen;
-            textBox1.Location = new Point(168, 261);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Stock";
-            textBox1.Size = new Size(304, 33);
-            textBox1.TabIndex = 9;
+            txtStock.BorderStyle = BorderStyle.None;
+            txtStock.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtStock.ForeColor = Color.LightSeaGreen;
+            txtStock.Location = new Point(168, 261);
+            txtStock.Name = "txtStock";
+            txtStock.PlaceholderText = "Stock";
+            txtStock.Size = new Size(304, 33);
+            txtStock.TabIndex = 9;
             // 
             // label6
             // 
@@ -193,49 +194,50 @@
             label6.TabIndex = 8;
             label6.Text = "Stock:";
             // 
-            // txtDatabase
+            // txtFecha
             // 
-            txtDatabase.BorderStyle = BorderStyle.None;
-            txtDatabase.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDatabase.ForeColor = Color.LightSeaGreen;
-            txtDatabase.Location = new Point(168, 208);
-            txtDatabase.Name = "txtDatabase";
-            txtDatabase.PlaceholderText = "Fecha de modificacion";
-            txtDatabase.Size = new Size(304, 33);
-            txtDatabase.TabIndex = 7;
+            txtFecha.BorderStyle = BorderStyle.None;
+            txtFecha.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFecha.ForeColor = Color.LightSeaGreen;
+            txtFecha.Location = new Point(168, 208);
+            txtFecha.Name = "txtFecha";
+            txtFecha.PlaceholderText = "Fecha de modificacion";
+            txtFecha.Size = new Size(304, 33);
+            txtFecha.TabIndex = 7;
             // 
-            // txtPassword
+            // txtRecargo
             // 
-            txtPassword.BorderStyle = BorderStyle.None;
-            txtPassword.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.ForeColor = Color.LightSeaGreen;
-            txtPassword.Location = new Point(168, 155);
-            txtPassword.Name = "txtPassword";
-            txtPassword.PlaceholderText = "El Porcentaje de recargo";
-            txtPassword.Size = new Size(304, 33);
-            txtPassword.TabIndex = 6;
+            txtRecargo.BorderStyle = BorderStyle.None;
+            txtRecargo.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtRecargo.ForeColor = Color.LightSeaGreen;
+            txtRecargo.Location = new Point(168, 155);
+            txtRecargo.Name = "txtRecargo";
+            txtRecargo.PlaceholderText = "El Porcentaje de recargo";
+            txtRecargo.Size = new Size(304, 33);
+            txtRecargo.TabIndex = 6;
+            txtRecargo.TextChanged += txtRecargo_TextChanged;
             // 
-            // txtUsername
+            // txtDescripcion
             // 
-            txtUsername.BorderStyle = BorderStyle.None;
-            txtUsername.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsername.ForeColor = Color.LightSeaGreen;
-            txtUsername.Location = new Point(168, 102);
-            txtUsername.Name = "txtUsername";
-            txtUsername.PlaceholderText = "Nombre o Descripcion del Producto";
-            txtUsername.Size = new Size(304, 33);
-            txtUsername.TabIndex = 5;
+            txtDescripcion.BorderStyle = BorderStyle.None;
+            txtDescripcion.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDescripcion.ForeColor = Color.LightSeaGreen;
+            txtDescripcion.Location = new Point(168, 102);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.PlaceholderText = "Nombre o Descripcion del Producto";
+            txtDescripcion.Size = new Size(304, 33);
+            txtDescripcion.TabIndex = 5;
             // 
-            // txtHost
+            // txtCodigo
             // 
-            txtHost.BorderStyle = BorderStyle.None;
-            txtHost.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtHost.ForeColor = Color.LightSeaGreen;
-            txtHost.Location = new Point(168, 49);
-            txtHost.Name = "txtHost";
-            txtHost.PlaceholderText = "Codigo Interno";
-            txtHost.Size = new Size(304, 33);
-            txtHost.TabIndex = 4;
+            txtCodigo.BorderStyle = BorderStyle.None;
+            txtCodigo.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCodigo.ForeColor = Color.LightSeaGreen;
+            txtCodigo.Location = new Point(168, 49);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.PlaceholderText = "Codigo Interno";
+            txtCodigo.Size = new Size(304, 33);
+            txtCodigo.TabIndex = 4;
             // 
             // label4
             // 
@@ -244,9 +246,9 @@
             label4.ForeColor = SystemColors.Control;
             label4.Location = new Point(100, 207);
             label4.Name = "label4";
-            label4.Size = new Size(66, 36);
+            label4.Size = new Size(70, 36);
             label4.TabIndex = 3;
-            label4.Text = "fecha:";
+            label4.Text = "Fecha:";
             // 
             // label3
             // 
@@ -320,21 +322,21 @@
         private Button btnGUardar;
         private Label label1;
         private GroupBox groupBox1;
-        private TextBox txtDatabase;
-        private TextBox txtPassword;
-        private TextBox txtUsername;
-        private TextBox txtHost;
+        private TextBox txtFecha;
+        private TextBox txtRecargo;
+        private TextBox txtDescripcion;
+        private TextBox txtCodigo;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label5;
-        private TextBox textBox3;
+        private TextBox txtMarca;
         private Label label8;
-        private TextBox textBox2;
+        private TextBox txtIva;
         private Label label7;
-        private TextBox textBox1;
+        private TextBox txtStock;
         private Label label6;
-        private TextBox textBox4;
+        private TextBox txtObservacion;
         private Label label9;
         private Button btnSalir;
     }
