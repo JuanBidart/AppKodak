@@ -2,7 +2,7 @@
 .vs/
 
 # Archivos de compilación/binarios (común en .NET)
-**/bin/
+#**/bin/
 **/obj/
 
 # Otros archivos que no necesitas subir (ej: secretos, logs, etc.)

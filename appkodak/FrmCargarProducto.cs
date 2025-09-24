@@ -57,6 +57,7 @@ namespace appkodak
                         break;
                     case false: string textonuevo = txtRecargo.Text.Remove(largo);
                         txtRecargo.Text = textonuevo;
+                        txtRecargo.SelectionStart = txtRecargo.Text.Length;
 
                         break;
                     default:
