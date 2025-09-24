@@ -3,7 +3,7 @@
 
 # Archivos de compilación/binarios (común en .NET)
 #**/bin/
-**/obj/
+#**/obj/
 
 # Otros archivos que no necesitas subir (ej: secretos, logs, etc.)
 iconosc.psd

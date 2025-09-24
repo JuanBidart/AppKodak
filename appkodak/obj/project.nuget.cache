@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "l2S7HdRsg30=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\JuanDiego\\Desktop\\Programas\\appkodak\\appkodak\\appkodak.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JuanDiego\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\JuanDiego\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\JuanDiego\\.nuget\\packages\\npgsql\\9.0.3\\npgsql.9.0.3.nupkg.sha512",
+    "C:\\Users\\JuanDiego\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.8\\system.configuration.configurationmanager.9.0.8.nupkg.sha512",
+    "C:\\Users\\JuanDiego\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.8\\system.diagnostics.eventlog.9.0.8.nupkg.sha512",
+    "C:\\Users\\JuanDiego\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.8\\system.security.cryptography.protecteddata.9.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
