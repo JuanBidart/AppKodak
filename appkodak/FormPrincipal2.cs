@@ -19,9 +19,36 @@ namespace appkodak
     {
         public FormPrincipal2()
         {
+            Task Inicio = Task.Run(() => { MiMensaje.Show("Iniciando la aplicación...", "Espere", MiMensaje.MbxIcon.Info, null, 2000); });
+            Inicio.Wait();
             InitializeComponent();
             this.BackColor = colorApp.Fondo;
+            ObtenerDolar();
 
+        }
+
+        public async void ObtenerDolar()
+        {
+            try
+            {
+                ConexionApiDolar datosDolar = await ConexionApiDolar.CreateAsync();
+                lblCompraOficial.Text = datosDolar.compraOficial;
+                lblVentaOficial.Text = datosDolar.ventaOficial;
+                lblUltimaActualizacionOficial.Text = datosDolar.fechaOficial;
+                lblCompreBlue.Text = datosDolar.compraBlue;
+                lblVentaBlue.Text = datosDolar.ventaBlue;
+                lblUltimaActualizacionBlue.Text = datosDolar.fechaBlue;
+
+            }
+            catch (Exception ex)
+            {
+                lblCompraOficial.Text = "$0";
+                lblVentaOficial.Text = "$0";
+                lblUltimaActualizacionOficial.Text = "Error Conexion";
+                lblCompreBlue.Text = "$0";
+                lblVentaBlue.Text = "$0";
+                lblUltimaActualizacionBlue.Text = "Error Conexion";
+            }
         }
         public void setdefaultcolors()
         {
@@ -100,20 +127,50 @@ namespace appkodak
 
                 lblDia.Text = DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy").ToUpper();
             }
+            if (DateTime.Now.Hour > 8 && DateTime.Now.Hour < 14)
+            {
+                if (DateTime.Now.Minute == 0 && DateTime.Now.Second == 30 || DateTime.Now.Minute == 30 && DateTime.Now.Second == 30)
+                {
+                    ObtenerDolar();
+                }
+            }
+
         }
 
-        private async void btnProbarConexion_Click(object sender, EventArgs e)
+        
+
+        private void bbtnProveedores_Click(object sender, EventArgs e)
+        {
+            FrmHerramientasProveedores frmHerramientasProveedores = new FrmHerramientasProveedores();
+            abrirFormularioHijo(frmHerramientasProveedores);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            MiMensaje.Show("Cerrando la aplicación", "Salir", MiMensaje.MbxIcon.Info, null, 2000);
+
+            Dispose();
+            ConexionGeneral conexionGeneral = new ConexionGeneral();
+            conexionGeneral.Dispose();
+            this.Close();
+        }
+
+        private async void btnProbarConexion_Click_1(object sender, EventArgs e)
         {
             try
             {
                 ConexionGeneral conexion = new ConexionGeneral();
                 if (conexion != null)
                 {
-                    MessageBox.Show("Conexión exitosa a la base de datos.", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MiMensaje.Show("Probando conexión a la base de datos...", "Espere", MiMensaje.MbxIcon.Info, null, 2000);
+                    MiMensaje.Show("Conexión exitosa a la base de datos.", "Ok", MiMensaje.MbxIcon.Info, null, 3000);
+
                 }
                 else
                 {
-                    MessageBox.Show("Error al conectar a la base de datos.");
+                    MiMensaje.Show("Error al conectar a la base de datos.", "Error", MiMensaje.MbxIcon.Error, null, 3000);
+
+
                 }
 
                 var estadoConexion = await conexion.Estado();
@@ -126,21 +183,6 @@ namespace appkodak
             {
                 throw;
             }
-        }
-
-        private void bbtnProveedores_Click(object sender, EventArgs e)
-        {
-            FrmHerramientasProveedores frmHerramientasProveedores = new FrmHerramientasProveedores();
-            abrirFormularioHijo(frmHerramientasProveedores);
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Cerrando la aplicación", "Salir", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Dispose();
-            ConexionGeneral conexionGeneral = new ConexionGeneral();
-            conexionGeneral.Dispose();
-            this.Close();
         }
     }
 }

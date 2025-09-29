@@ -31,6 +31,14 @@
             btnGUardar = new Button();
             label1 = new Label();
             groupBox1 = new GroupBox();
+            txtCodProductoProveedor = new TextBox();
+            label13 = new Label();
+            chxSi = new CheckBox();
+            label12 = new Label();
+            label11 = new Label();
+            txtCosto = new TextBox();
+            label10 = new Label();
+            cbxProveedor = new ComboBox();
             txtObservacion = new TextBox();
             label9 = new Label();
             txtMarca = new TextBox();
@@ -58,10 +66,10 @@
             btnGUardar.FlatStyle = FlatStyle.Flat;
             btnGUardar.Font = new Font("Dubai", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnGUardar.ForeColor = Color.White;
-            btnGUardar.Location = new Point(16, 550);
+            btnGUardar.Location = new Point(189, 483);
             btnGUardar.Name = "btnGUardar";
             btnGUardar.Size = new Size(266, 81);
-            btnGUardar.TabIndex = 10;
+            btnGUardar.TabIndex = 0;
             btnGUardar.Text = "Guardar";
             btnGUardar.UseVisualStyleBackColor = true;
             btnGUardar.Click += btnGUardar_Click;
@@ -72,7 +80,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Dubai Medium", 25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.LightSeaGreen;
-            label1.Location = new Point(165, 9);
+            label1.Location = new Point(392, 9);
             label1.Name = "label1";
             label1.Size = new Size(270, 57);
             label1.TabIndex = 11;
@@ -81,6 +89,14 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(txtCodProductoProveedor);
+            groupBox1.Controls.Add(label13);
+            groupBox1.Controls.Add(chxSi);
+            groupBox1.Controls.Add(label12);
+            groupBox1.Controls.Add(label11);
+            groupBox1.Controls.Add(txtCosto);
+            groupBox1.Controls.Add(label10);
+            groupBox1.Controls.Add(cbxProveedor);
             groupBox1.Controls.Add(txtObservacion);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(txtMarca);
@@ -98,31 +114,115 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label5);
             groupBox1.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox1.ForeColor = Color.White;
+            groupBox1.ForeColor = Color.FromArgb(180, 80, 30);
             groupBox1.Location = new Point(12, 53);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(554, 479);
-            groupBox1.TabIndex = 12;
+            groupBox1.Size = new Size(1051, 396);
+            groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Producto Nuevo";
+            // 
+            // txtCodProductoProveedor
+            // 
+            txtCodProductoProveedor.BorderStyle = BorderStyle.None;
+            txtCodProductoProveedor.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCodProductoProveedor.ForeColor = Color.LightSeaGreen;
+            txtCodProductoProveedor.Location = new Point(715, 207);
+            txtCodProductoProveedor.Name = "txtCodProductoProveedor";
+            txtCodProductoProveedor.PlaceholderText = "Codigo del Producto del Proveedor";
+            txtCodProductoProveedor.Size = new Size(304, 33);
+            txtCodProductoProveedor.TabIndex = 23;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Dubai", 15.75F);
+            label13.ForeColor = SystemColors.Control;
+            label13.Location = new Point(479, 204);
+            label13.Name = "label13";
+            label13.Size = new Size(233, 36);
+            label13.TabIndex = 22;
+            label13.Text = "Cod.Producto Proveedor:";
+            // 
+            // chxSi
+            // 
+            chxSi.AutoSize = true;
+            chxSi.Location = new Point(715, 154);
+            chxSi.Name = "chxSi";
+            chxSi.Size = new Size(48, 36);
+            chxSi.TabIndex = 21;
+            chxSi.Text = "SI";
+            chxSi.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Dubai", 15.75F);
+            label12.ForeColor = SystemColors.Control;
+            label12.Location = new Point(588, 152);
+            label12.Name = "label12";
+            label12.Size = new Size(120, 36);
+            label12.TabIndex = 20;
+            label12.Text = "Es Principal:";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Dubai", 15.75F);
+            label11.ForeColor = SystemColors.Control;
+            label11.Location = new Point(599, 44);
+            label11.Name = "label11";
+            label11.Size = new Size(109, 36);
+            label11.TabIndex = 19;
+            label11.Text = "Proveedor:";
+            // 
+            // txtCosto
+            // 
+            txtCosto.BorderStyle = BorderStyle.None;
+            txtCosto.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCosto.ForeColor = Color.LightSeaGreen;
+            txtCosto.Location = new Point(715, 102);
+            txtCosto.Name = "txtCosto";
+            txtCosto.PlaceholderText = "Costo del producto";
+            txtCosto.Size = new Size(304, 33);
+            txtCosto.TabIndex = 18;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Dubai", 15.75F);
+            label10.ForeColor = SystemColors.Control;
+            label10.Location = new Point(638, 101);
+            label10.Name = "label10";
+            label10.Size = new Size(70, 36);
+            label10.TabIndex = 17;
+            label10.Text = "Costo:";
+            // 
+            // cbxProveedor
+            // 
+            cbxProveedor.FormattingEnabled = true;
+            cbxProveedor.Location = new Point(715, 44);
+            cbxProveedor.Name = "cbxProveedor";
+            cbxProveedor.Size = new Size(304, 40);
+            cbxProveedor.TabIndex = 15;
             // 
             // txtObservacion
             // 
             txtObservacion.BorderStyle = BorderStyle.None;
             txtObservacion.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtObservacion.ForeColor = Color.LightSeaGreen;
-            txtObservacion.Location = new Point(168, 420);
+            txtObservacion.Location = new Point(715, 315);
             txtObservacion.Name = "txtObservacion";
             txtObservacion.PlaceholderText = "Datos que complementan";
             txtObservacion.Size = new Size(304, 33);
-            txtObservacion.TabIndex = 15;
+            txtObservacion.TabIndex = 7;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Dubai", 15.75F);
             label9.ForeColor = SystemColors.Control;
-            label9.Location = new Point(39, 419);
+            label9.Location = new Point(581, 314);
             label9.Name = "label9";
             label9.Size = new Size(127, 36);
             label9.TabIndex = 14;
@@ -133,18 +233,18 @@
             txtMarca.BorderStyle = BorderStyle.None;
             txtMarca.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtMarca.ForeColor = Color.LightSeaGreen;
-            txtMarca.Location = new Point(168, 367);
+            txtMarca.Location = new Point(715, 262);
             txtMarca.Name = "txtMarca";
             txtMarca.PlaceholderText = "Marca del producto";
             txtMarca.Size = new Size(304, 33);
-            txtMarca.TabIndex = 13;
+            txtMarca.TabIndex = 6;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Dubai", 15.75F);
             label8.ForeColor = SystemColors.Control;
-            label8.Location = new Point(93, 366);
+            label8.Location = new Point(635, 261);
             label8.Name = "label8";
             label8.Size = new Size(73, 36);
             label8.TabIndex = 12;
@@ -155,18 +255,18 @@
             txtIva.BorderStyle = BorderStyle.None;
             txtIva.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtIva.ForeColor = Color.LightSeaGreen;
-            txtIva.Location = new Point(168, 314);
+            txtIva.Location = new Point(142, 314);
             txtIva.Name = "txtIva";
             txtIva.PlaceholderText = "Iva";
             txtIva.Size = new Size(304, 33);
-            txtIva.TabIndex = 11;
+            txtIva.TabIndex = 5;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Dubai", 15.75F);
             label7.ForeColor = SystemColors.Control;
-            label7.Location = new Point(123, 313);
+            label7.Location = new Point(97, 313);
             label7.Name = "label7";
             label7.Size = new Size(43, 36);
             label7.TabIndex = 10;
@@ -177,18 +277,18 @@
             txtStock.BorderStyle = BorderStyle.None;
             txtStock.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtStock.ForeColor = Color.LightSeaGreen;
-            txtStock.Location = new Point(168, 261);
+            txtStock.Location = new Point(142, 261);
             txtStock.Name = "txtStock";
             txtStock.PlaceholderText = "Stock";
             txtStock.Size = new Size(304, 33);
-            txtStock.TabIndex = 9;
+            txtStock.TabIndex = 4;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Dubai", 15.75F);
             label6.ForeColor = SystemColors.Control;
-            label6.Location = new Point(97, 260);
+            label6.Location = new Point(71, 260);
             label6.Name = "label6";
             label6.Size = new Size(69, 36);
             label6.TabIndex = 8;
@@ -199,52 +299,52 @@
             txtFecha.BorderStyle = BorderStyle.None;
             txtFecha.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtFecha.ForeColor = Color.LightSeaGreen;
-            txtFecha.Location = new Point(168, 208);
+            txtFecha.Location = new Point(142, 208);
             txtFecha.Name = "txtFecha";
             txtFecha.PlaceholderText = "Fecha de modificacion";
             txtFecha.Size = new Size(304, 33);
-            txtFecha.TabIndex = 7;
+            txtFecha.TabIndex = 3;
             // 
             // txtRecargo
             // 
             txtRecargo.BorderStyle = BorderStyle.None;
             txtRecargo.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtRecargo.ForeColor = Color.LightSeaGreen;
-            txtRecargo.Location = new Point(168, 155);
+            txtRecargo.Location = new Point(142, 155);
             txtRecargo.Name = "txtRecargo";
             txtRecargo.PlaceholderText = "El Porcentaje de recargo";
             txtRecargo.Size = new Size(304, 33);
-            txtRecargo.TabIndex = 6;
-            txtRecargo.TextChanged += txtRecargo_TextChanged;
+            txtRecargo.TabIndex = 2;
+            txtRecargo.Leave += txtRecargo_Leave;
             // 
             // txtDescripcion
             // 
             txtDescripcion.BorderStyle = BorderStyle.None;
             txtDescripcion.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDescripcion.ForeColor = Color.LightSeaGreen;
-            txtDescripcion.Location = new Point(168, 102);
+            txtDescripcion.Location = new Point(142, 102);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.PlaceholderText = "Nombre o Descripcion del Producto";
             txtDescripcion.Size = new Size(304, 33);
-            txtDescripcion.TabIndex = 5;
+            txtDescripcion.TabIndex = 1;
             // 
             // txtCodigo
             // 
             txtCodigo.BorderStyle = BorderStyle.None;
             txtCodigo.Font = new Font("Dubai", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCodigo.ForeColor = Color.LightSeaGreen;
-            txtCodigo.Location = new Point(168, 49);
+            txtCodigo.Location = new Point(142, 49);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.PlaceholderText = "Codigo Interno";
             txtCodigo.Size = new Size(304, 33);
-            txtCodigo.TabIndex = 4;
+            txtCodigo.TabIndex = 0;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Dubai", 15.75F);
             label4.ForeColor = SystemColors.Control;
-            label4.Location = new Point(100, 207);
+            label4.Location = new Point(74, 207);
             label4.Name = "label4";
             label4.Size = new Size(70, 36);
             label4.TabIndex = 3;
@@ -255,7 +355,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Dubai", 15.75F);
             label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(77, 154);
+            label3.Location = new Point(51, 154);
             label3.Name = "label3";
             label3.Size = new Size(89, 36);
             label3.TabIndex = 2;
@@ -266,7 +366,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Dubai", 15.75F);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(45, 101);
+            label2.Location = new Point(19, 101);
             label2.Name = "label2";
             label2.Size = new Size(121, 36);
             label2.TabIndex = 1;
@@ -277,7 +377,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Dubai", 15.75F);
             label5.ForeColor = SystemColors.Control;
-            label5.Location = new Point(87, 48);
+            label5.Location = new Point(61, 48);
             label5.Name = "label5";
             label5.Size = new Size(79, 36);
             label5.TabIndex = 0;
@@ -290,10 +390,10 @@
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.Font = new Font("Dubai", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = Color.White;
-            btnSalir.Location = new Point(300, 550);
+            btnSalir.Location = new Point(627, 483);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(266, 81);
-            btnSalir.TabIndex = 13;
+            btnSalir.TabIndex = 1;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
@@ -303,7 +403,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
-            ClientSize = new Size(623, 652);
+            ClientSize = new Size(1075, 595);
             Controls.Add(btnSalir);
             Controls.Add(groupBox1);
             Controls.Add(label1);
@@ -311,6 +411,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FrmCargarProducto";
             Text = "Carga Producto";
+            Load += FrmCargarProducto_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -339,5 +440,13 @@
         private TextBox txtObservacion;
         private Label label9;
         private Button btnSalir;
+        private Label label12;
+        private Label label11;
+        private TextBox txtCosto;
+        private Label label10;
+        private ComboBox cbxProveedor;
+        private TextBox txtCodProductoProveedor;
+        private Label label13;
+        private CheckBox chxSi;
     }
 }

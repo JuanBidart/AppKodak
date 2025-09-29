@@ -318,6 +318,7 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FrmCargaProveedores";
             Text = "FrmCargaProveedores";
+            Load += FrmCargaProveedores_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();

@@ -36,14 +36,15 @@ namespace Negocio
                 Telefono2 = reader.GetString("telefono2"),
                 PaginaWeb = reader.GetString("paginaweb"),
                 Iva = reader.GetDecimal("iva"),
-                Activo = reader.GetBoolean("activo")
+                //Activo = reader.GetBoolean("activo")
+                //Activo = reader.IsDBNull("activo") ? false : reader.GetBoolean("activo")
 
             };
         }
 
         public async Task<List<Tproveedor>> ObtenerTodosAsync()
         {
-            string sql = @"SELECT id, nombre, ciudad, direccion, email, telefono1, telefono2, paginaweb, iva 
+            string sql = @"SELECT id, nombre, ciudad, direccion, email, telefono1, telefono2, paginaweb, iva
                            FROM proveedores 
                            WHERE activo = true 
                            ORDER BY nombre";

@@ -45,7 +45,7 @@ namespace appkodak
                     tproveedor.Telefono1 = txtTelefonoP.Text;
                     tproveedor.Telefono2 = txtTelefonoSec.Text;
                     tproveedor.PaginaWeb = txtWeb.Text;
-                    tproveedor.Iva = ( !string.IsNullOrEmpty(txtIva.Text)) ? decimal.Parse("0.0") : Convert.ToDecimal(txtIva.Text);
+                    tproveedor.Iva = (!string.IsNullOrEmpty(txtIva.Text)) ? decimal.Parse("0.0") : Convert.ToDecimal(txtIva.Text);
 
 
                     ConexionProveedores.InsertarAsync(tproveedor);
@@ -80,13 +80,13 @@ namespace appkodak
             }
         }
 
-       private void txtIva_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtIva_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Permitir solo números, el punto decimal y la tecla de retroceso
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
             {
                 errorProvider1.SetError(txtIva, "Ingrese un valor numérico válido para IVA.");
-                
+
                 e.Handled = true;
 
             }
@@ -94,11 +94,15 @@ namespace appkodak
             // Permitir solo un punto decimal
             if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
             {
-                
+
                 e.Handled = true;
             }
         }
 
+        private void FrmCargaProveedores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

@@ -15,7 +15,7 @@ namespace Negocio
 {
     public static class Herramientas
     {
-        public static bool ValidarNumeros(string textBox) 
+        public static bool EsNumero(string textBox) 
         {
             char ultimo = textBox.Last();
             
@@ -30,6 +30,15 @@ namespace Negocio
                 }
                                    
 
+        }
+
+        public static string ObtenerFechaActual()
+        {
+            return DateTime.Now.ToString("dd/MM/yyyy");
+        }
+        public static string ObtenerHoraActual()
+        {
+            return DateTime.Now.ToString("HH:mm:ss");
         }
 
 

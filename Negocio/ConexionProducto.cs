@@ -63,9 +63,9 @@ namespace Negocio
         // CREAR - Insertar nuevo producto
         public async Task<int> InsertarAsync(Tproductos producto)
         {
-            string sql = @"INSERT INTO productos (SELECT id, cod, nombre, recargo, fecha, stock, iva, marca, observacion,activo ) 
-                          VALUES (@cod @nombre, @recargo, @fecha, @stock, @iva ,@marca ,@observacion, @activo) 
-                          RETURNING id";
+            string sql = @"INSERT INTO productos (cod, nombre, recargo, fecha, stock, iva, marca, observacion, activo)
+                            VALUES (@cod, @nombre, @recargo, @fecha, @stock, @iva, @marca, @observacion, @activo)
+                        RETURNING id";
 
             var parametros = new[]
             {

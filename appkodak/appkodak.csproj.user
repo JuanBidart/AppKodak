@@ -40,5 +40,8 @@
     <Compile Update="FrmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MiMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

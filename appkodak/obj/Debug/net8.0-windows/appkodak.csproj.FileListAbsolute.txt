@@ -47,3 +47,15 @@ C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\obj\Debug\net8.0-windows\
 C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\obj\Debug\net8.0-windows\appkodak.genruntimeconfig.cache
 C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\obj\Debug\net8.0-windows\ref\appkodak.dll
 C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\obj\Debug\net8.0-windows\appkodak.FrmListaProveedores.resources
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxAbrir.png
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxAdmiracion.png
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxCerrar.png
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxGuardar.png
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxInformacion.png
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxOk.png
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxPrecaucion.png
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxPregunta.png
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxReloj.png
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxStop.png
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxVerificado.png
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\obj\Debug\net8.0-windows\MiMensaje.resources
