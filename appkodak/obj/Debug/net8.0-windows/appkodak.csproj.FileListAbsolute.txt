@@ -59,3 +59,5 @@ C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\
 C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxStop.png
 C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\bin\Debug\net8.0-windows\Icons8\msbxVerificado.png
 C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\obj\Debug\net8.0-windows\MiMensaje.resources
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\obj\Debug\net8.0-windows\appkodak.FrmHerramientaConfiguracion.resources
+C:\Users\JuanDiego\Desktop\Programas\appkodak\appkodak\obj\Debug\net8.0-windows\appkodak.FrmListasdePrecio_revendedorProfesional.resources

@@ -22,6 +22,9 @@
     <Compile Update="FrmEjecutarSentenciaSql.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmHerramientaConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmHerramientasProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -35,6 +38,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmListaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmListasdePrecio_revendedorProfesional.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmProducto.cs">

@@ -59,6 +59,38 @@ namespace Negocio
             var parametros = new[] { new NpgsqlParameter("@nombre", $"%{nombre}%") };
             return await conexion.EjecutarConsultaAsync(sql, MapearProducto, parametros);
         }
+        // Insertar producto con transacción
+
+        public async Task<int> InsertarProductoConTransaccionAsync(
+      Tproductos producto,
+      NpgsqlConnection conexionExterna,
+      NpgsqlTransaction transaccionExterna)
+        {
+            // SQL con RETURNING para obtener el ID recién insertado
+            string sql = @"INSERT INTO productos (Cod, Nombre, Recargo, Fecha, Stock, Iva, Marca, Observacion, Activo) 
+                        VALUES (@Cod, @Nombre, @Recargo, @Fecha, @Stock, @Iva, @Marca, @Observacion, @Activo) 
+                        RETURNING id"; // Asumo que el ID se llama 'id'
+
+            // NOTA CLAVE: Usamos la CONEXIÓN EXTERNA y la TRANSACCIÓN EXTERNA
+            using var comando = new NpgsqlCommand(sql, conexionExterna, transaccionExterna);
+
+            // Mapeo de parámetros
+            comando.Parameters.AddWithValue("@Cod", producto.Cod);
+            comando.Parameters.AddWithValue("@Nombre", producto.Nombre);
+            comando.Parameters.AddWithValue("@Recargo", producto.Recargo);
+            comando.Parameters.AddWithValue("@Fecha", producto.Fecha);
+            comando.Parameters.AddWithValue("@Stock", producto.Stock);
+            comando.Parameters.AddWithValue("@Iva", producto.Iva);
+            comando.Parameters.AddWithValue("@Marca", producto.Marca);
+            comando.Parameters.AddWithValue("@Observacion", producto.Observacion);
+            comando.Parameters.AddWithValue("@Activo", producto.Activo);
+
+            // Ejecutar y obtener el ID (ExecuteScalarAsync)
+            var resultado = await comando.ExecuteScalarAsync();
+
+            // Si el resultado es nulo o DBNull, devuelve 0, lo que indicará un fallo.
+            return resultado != null && resultado != DBNull.Value ? Convert.ToInt32(resultado) : 0;
+        }
 
         // CREAR - Insertar nuevo producto
         public async Task<int> InsertarAsync(Tproductos producto)

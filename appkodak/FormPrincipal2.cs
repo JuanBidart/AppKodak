@@ -109,6 +109,7 @@ namespace appkodak
             timer100ms.Start();
             timer100ms.Tick += TimerPrincipal_Tick;
             lblDia.Text = DateTime.Now.ToString("dddd, dd 'de' MMMM 'de' yyyy").ToUpper();
+            ObtenerDolar();
 
         }
 
@@ -137,7 +138,7 @@ namespace appkodak
 
         }
 
-        
+
 
         private void bbtnProveedores_Click(object sender, EventArgs e)
         {
@@ -183,6 +184,12 @@ namespace appkodak
             {
                 throw;
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FrmHerramientaConfiguracion herramientaConfiguracion = new FrmHerramientaConfiguracion();
+            abrirFormularioHijo(herramientaConfiguracion);
         }
     }
 }

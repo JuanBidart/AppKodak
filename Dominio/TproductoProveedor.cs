@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class TproductoProvedor
+    public class TproductoProveedor
     {
         public long Id { get; set; }
         public long? IdProducto { get; set; }

@@ -45,14 +45,8 @@
             lblHora = new Label();
             lblDia = new Label();
             label1 = new Label();
+            tableLayoutPanel2 = new TableLayoutPanel();
             panel3 = new Panel();
-            lblCompreBlue = new Label();
-            lblUltimaActualizacionBlue = new Label();
-            label7 = new Label();
-            lblVentaBlue = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
             lblUltimaActualizacionOficial = new Label();
             label5 = new Label();
             lblVentaOficial = new Label();
@@ -60,13 +54,23 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            panel4 = new Panel();
+            lblUltimaActualizacionBlue = new Label();
+            lblCompreBlue = new Label();
+            lblVentaBlue = new Label();
+            label7 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
             timer100ms = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelVentana.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
             panel3.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -119,6 +123,7 @@
             button2.Text = "Configuraciones";
             button2.TextImageRelation = TextImageRelation.ImageBeforeText;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
             // 
             // btnSalir
             // 
@@ -247,15 +252,15 @@
             tableLayoutPanel1.Controls.Add(lblHora, 0, 5);
             tableLayoutPanel1.Controls.Add(lblDia, 0, 4);
             tableLayoutPanel1.Controls.Add(label1, 0, 2);
-            tableLayoutPanel1.Controls.Add(panel3, 0, 3);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 3);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 6;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 17.8321686F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 27.3504276F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 29.91453F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.3589745F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 22.905983F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 37.77778F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 63F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 61F));
             tableLayoutPanel1.Size = new Size(772, 711);
@@ -296,23 +301,31 @@
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Dubai", 35.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Transparent;
-            label1.Location = new Point(244, 289);
+            label1.Location = new Point(244, 256);
             label1.Name = "label1";
             label1.Size = new Size(284, 81);
             label1.TabIndex = 1;
             label1.Text = "Bienvenidos";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Controls.Add(panel3, 0, 0);
+            tableLayoutPanel2.Controls.Add(panel4, 1, 0);
+            tableLayoutPanel2.Location = new Point(3, 367);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new Size(766, 152);
+            tableLayoutPanel2.TabIndex = 5;
+            // 
             // panel3
             // 
-            panel3.BorderStyle = BorderStyle.Fixed3D;
-            panel3.Controls.Add(lblCompreBlue);
-            panel3.Controls.Add(lblUltimaActualizacionBlue);
-            panel3.Controls.Add(label7);
-            panel3.Controls.Add(lblVentaBlue);
-            panel3.Controls.Add(label9);
-            panel3.Controls.Add(label10);
-            panel3.Controls.Add(label11);
+            panel3.BackColor = Color.FromArgb(40, 40, 40);
+            panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(lblUltimaActualizacionOficial);
             panel3.Controls.Add(label5);
             panel3.Controls.Add(lblVentaOficial);
@@ -320,94 +333,10 @@
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(label2);
-            panel3.Location = new Point(3, 413);
+            panel3.Location = new Point(3, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(766, 169);
+            panel3.Size = new Size(377, 146);
             panel3.TabIndex = 4;
-            // 
-            // lblCompreBlue
-            // 
-            lblCompreBlue.Anchor = AnchorStyles.None;
-            lblCompreBlue.AutoSize = true;
-            lblCompreBlue.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblCompreBlue.ForeColor = Color.LightSeaGreen;
-            lblCompreBlue.Location = new Point(455, 77);
-            lblCompreBlue.Name = "lblCompreBlue";
-            lblCompreBlue.Size = new Size(25, 32);
-            lblCompreBlue.TabIndex = 13;
-            lblCompreBlue.Text = "$";
-            // 
-            // lblUltimaActualizacionBlue
-            // 
-            lblUltimaActualizacionBlue.Anchor = AnchorStyles.None;
-            lblUltimaActualizacionBlue.AutoSize = true;
-            lblUltimaActualizacionBlue.Font = new Font("Dubai", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUltimaActualizacionBlue.ForeColor = Color.FromArgb(180, 80, 30);
-            lblUltimaActualizacionBlue.Location = new Point(619, 129);
-            lblUltimaActualizacionBlue.Name = "lblUltimaActualizacionBlue";
-            lblUltimaActualizacionBlue.Size = new Size(18, 27);
-            lblUltimaActualizacionBlue.TabIndex = 12;
-            lblUltimaActualizacionBlue.Text = "..";
-            // 
-            // label7
-            // 
-            label7.Anchor = AnchorStyles.None;
-            label7.AutoSize = true;
-            label7.Font = new Font("Dubai", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.FromArgb(180, 80, 30);
-            label7.Location = new Point(466, 129);
-            label7.Name = "label7";
-            label7.Size = new Size(147, 27);
-            label7.TabIndex = 11;
-            label7.Text = "Ultima actualizacion:";
-            // 
-            // lblVentaBlue
-            // 
-            lblVentaBlue.Anchor = AnchorStyles.None;
-            lblVentaBlue.AutoSize = true;
-            lblVentaBlue.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblVentaBlue.ForeColor = Color.LightSeaGreen;
-            lblVentaBlue.Location = new Point(659, 78);
-            lblVentaBlue.Name = "lblVentaBlue";
-            lblVentaBlue.Size = new Size(25, 32);
-            lblVentaBlue.TabIndex = 10;
-            lblVentaBlue.Text = "$";
-            // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.None;
-            label9.AutoSize = true;
-            label9.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Transparent;
-            label9.Location = new Point(654, 48);
-            label9.Name = "label9";
-            label9.Size = new Size(71, 32);
-            label9.TabIndex = 9;
-            label9.Text = "Venta:";
-            // 
-            // label10
-            // 
-            label10.Anchor = AnchorStyles.None;
-            label10.AutoSize = true;
-            label10.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.Transparent;
-            label10.Location = new Point(449, 48);
-            label10.Name = "label10";
-            label10.Size = new Size(87, 32);
-            label10.TabIndex = 8;
-            label10.Text = "Compra:";
-            // 
-            // label11
-            // 
-            label11.Anchor = AnchorStyles.None;
-            label11.AutoSize = true;
-            label11.Font = new Font("Dubai", 15.75F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.Transparent;
-            label11.Location = new Point(536, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(107, 36);
-            label11.TabIndex = 7;
-            label11.Text = "Dolar Blue";
             // 
             // lblUltimaActualizacionOficial
             // 
@@ -415,7 +344,7 @@
             lblUltimaActualizacionOficial.AutoSize = true;
             lblUltimaActualizacionOficial.Font = new Font("Dubai", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUltimaActualizacionOficial.ForeColor = Color.FromArgb(180, 80, 30);
-            lblUltimaActualizacionOficial.Location = new Point(203, 129);
+            lblUltimaActualizacionOficial.Location = new Point(177, 107);
             lblUltimaActualizacionOficial.Name = "lblUltimaActualizacionOficial";
             lblUltimaActualizacionOficial.Size = new Size(18, 27);
             lblUltimaActualizacionOficial.TabIndex = 6;
@@ -427,7 +356,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Dubai", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(180, 80, 30);
-            label5.Location = new Point(50, 129);
+            label5.Location = new Point(24, 107);
             label5.Name = "label5";
             label5.Size = new Size(147, 27);
             label5.TabIndex = 5;
@@ -439,7 +368,7 @@
             lblVentaOficial.AutoSize = true;
             lblVentaOficial.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblVentaOficial.ForeColor = Color.LightSeaGreen;
-            lblVentaOficial.Location = new Point(252, 78);
+            lblVentaOficial.Location = new Point(253, 68);
             lblVentaOficial.Name = "lblVentaOficial";
             lblVentaOficial.Size = new Size(25, 32);
             lblVentaOficial.TabIndex = 4;
@@ -451,7 +380,7 @@
             lblCompraOficial.AutoSize = true;
             lblCompraOficial.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCompraOficial.ForeColor = Color.LightSeaGreen;
-            lblCompraOficial.Location = new Point(36, 78);
+            lblCompraOficial.Location = new Point(34, 66);
             lblCompraOficial.Name = "lblCompraOficial";
             lblCompraOficial.Size = new Size(25, 32);
             lblCompraOficial.TabIndex = 3;
@@ -463,7 +392,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Transparent;
-            label4.Location = new Point(249, 48);
+            label4.Location = new Point(250, 38);
             label4.Name = "label4";
             label4.Size = new Size(71, 32);
             label4.TabIndex = 2;
@@ -475,7 +404,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Transparent;
-            label3.Location = new Point(33, 48);
+            label3.Location = new Point(34, 38);
             label3.Name = "label3";
             label3.Size = new Size(87, 32);
             label3.TabIndex = 1;
@@ -487,11 +416,111 @@
             label2.AutoSize = true;
             label2.Font = new Font("Dubai", 15.75F, FontStyle.Underline, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Transparent;
-            label2.Location = new Point(108, 0);
+            label2.Location = new Point(129, 3);
             label2.Name = "label2";
             label2.Size = new Size(129, 36);
             label2.TabIndex = 0;
             label2.Text = "Dolar Oficial ";
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.FromArgb(40, 40, 40);
+            panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Controls.Add(lblUltimaActualizacionBlue);
+            panel4.Controls.Add(lblCompreBlue);
+            panel4.Controls.Add(lblVentaBlue);
+            panel4.Controls.Add(label7);
+            panel4.Controls.Add(label9);
+            panel4.Controls.Add(label10);
+            panel4.Controls.Add(label11);
+            panel4.Location = new Point(386, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(377, 146);
+            panel4.TabIndex = 5;
+            // 
+            // lblUltimaActualizacionBlue
+            // 
+            lblUltimaActualizacionBlue.Anchor = AnchorStyles.None;
+            lblUltimaActualizacionBlue.AutoSize = true;
+            lblUltimaActualizacionBlue.Font = new Font("Dubai", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUltimaActualizacionBlue.ForeColor = Color.FromArgb(180, 80, 30);
+            lblUltimaActualizacionBlue.Location = new Point(179, 107);
+            lblUltimaActualizacionBlue.Name = "lblUltimaActualizacionBlue";
+            lblUltimaActualizacionBlue.Size = new Size(18, 27);
+            lblUltimaActualizacionBlue.TabIndex = 12;
+            lblUltimaActualizacionBlue.Text = "..";
+            // 
+            // lblCompreBlue
+            // 
+            lblCompreBlue.Anchor = AnchorStyles.None;
+            lblCompreBlue.AutoSize = true;
+            lblCompreBlue.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCompreBlue.ForeColor = Color.LightSeaGreen;
+            lblCompreBlue.Location = new Point(17, 68);
+            lblCompreBlue.Name = "lblCompreBlue";
+            lblCompreBlue.Size = new Size(25, 32);
+            lblCompreBlue.TabIndex = 13;
+            lblCompreBlue.Text = "$";
+            // 
+            // lblVentaBlue
+            // 
+            lblVentaBlue.Anchor = AnchorStyles.None;
+            lblVentaBlue.AutoSize = true;
+            lblVentaBlue.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblVentaBlue.ForeColor = Color.LightSeaGreen;
+            lblVentaBlue.Location = new Point(283, 68);
+            lblVentaBlue.Name = "lblVentaBlue";
+            lblVentaBlue.Size = new Size(25, 32);
+            lblVentaBlue.TabIndex = 10;
+            lblVentaBlue.Text = "$";
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.None;
+            label7.AutoSize = true;
+            label7.Font = new Font("Dubai", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(180, 80, 30);
+            label7.Location = new Point(26, 107);
+            label7.Name = "label7";
+            label7.Size = new Size(147, 27);
+            label7.TabIndex = 11;
+            label7.Text = "Ultima actualizacion:";
+            // 
+            // label9
+            // 
+            label9.Anchor = AnchorStyles.None;
+            label9.AutoSize = true;
+            label9.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Transparent;
+            label9.Location = new Point(283, 38);
+            label9.Name = "label9";
+            label9.Size = new Size(71, 32);
+            label9.TabIndex = 9;
+            label9.Text = "Venta:";
+            // 
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.None;
+            label10.AutoSize = true;
+            label10.Font = new Font("Dubai Medium", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.Transparent;
+            label10.Location = new Point(17, 38);
+            label10.Name = "label10";
+            label10.Size = new Size(87, 32);
+            label10.TabIndex = 8;
+            label10.Text = "Compra:";
+            // 
+            // label11
+            // 
+            label11.Anchor = AnchorStyles.None;
+            label11.AutoSize = true;
+            label11.Font = new Font("Dubai", 15.75F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.Transparent;
+            label11.Location = new Point(136, 3);
+            label11.Name = "label11";
+            label11.Size = new Size(107, 36);
+            label11.TabIndex = 7;
+            label11.Text = "Dolar Blue";
             // 
             // timer100ms
             // 
@@ -516,8 +545,11 @@
             panelVentana.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -554,5 +586,7 @@
         private Label label9;
         private Label label10;
         private Label label11;
+        private TableLayoutPanel tableLayoutPanel2;
+        private Panel panel4;
     }
 }

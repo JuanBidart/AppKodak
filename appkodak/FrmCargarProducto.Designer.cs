@@ -31,6 +31,8 @@
             btnGUardar = new Button();
             label1 = new Label();
             groupBox1 = new GroupBox();
+            label14 = new Label();
+            txtPrecioFInal = new TextBox();
             txtCodProductoProveedor = new TextBox();
             label13 = new Label();
             chxSi = new CheckBox();
@@ -66,7 +68,7 @@
             btnGUardar.FlatStyle = FlatStyle.Flat;
             btnGUardar.Font = new Font("Dubai", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnGUardar.ForeColor = Color.White;
-            btnGUardar.Location = new Point(189, 483);
+            btnGUardar.Location = new Point(192, 511);
             btnGUardar.Name = "btnGUardar";
             btnGUardar.Size = new Size(266, 81);
             btnGUardar.TabIndex = 0;
@@ -80,7 +82,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Dubai Medium", 25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.LightSeaGreen;
-            label1.Location = new Point(392, 9);
+            label1.Location = new Point(395, 9);
             label1.Name = "label1";
             label1.Size = new Size(270, 57);
             label1.TabIndex = 11;
@@ -89,6 +91,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label14);
+            groupBox1.Controls.Add(txtPrecioFInal);
             groupBox1.Controls.Add(txtCodProductoProveedor);
             groupBox1.Controls.Add(label13);
             groupBox1.Controls.Add(chxSi);
@@ -117,10 +121,30 @@
             groupBox1.ForeColor = Color.FromArgb(180, 80, 30);
             groupBox1.Location = new Point(12, 53);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1051, 396);
+            groupBox1.Size = new Size(1051, 443);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Producto Nuevo";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Dubai", 15.75F);
+            label14.ForeColor = SystemColors.Control;
+            label14.Location = new Point(340, 385);
+            label14.Name = "label14";
+            label14.Size = new Size(117, 36);
+            label14.TabIndex = 24;
+            label14.Text = "Precio Final";
+            // 
+            // txtPrecioFInal
+            // 
+            txtPrecioFInal.ForeColor = Color.FromArgb(180, 80, 30);
+            txtPrecioFInal.Location = new Point(462, 383);
+            txtPrecioFInal.Name = "txtPrecioFInal";
+            txtPrecioFInal.PlaceholderText = "$0";
+            txtPrecioFInal.Size = new Size(190, 40);
+            txtPrecioFInal.TabIndex = 23;
             // 
             // txtCodProductoProveedor
             // 
@@ -131,7 +155,7 @@
             txtCodProductoProveedor.Name = "txtCodProductoProveedor";
             txtCodProductoProveedor.PlaceholderText = "Codigo del Producto del Proveedor";
             txtCodProductoProveedor.Size = new Size(304, 33);
-            txtCodProductoProveedor.TabIndex = 23;
+            txtCodProductoProveedor.TabIndex = 6;
             // 
             // label13
             // 
@@ -150,7 +174,7 @@
             chxSi.Location = new Point(715, 154);
             chxSi.Name = "chxSi";
             chxSi.Size = new Size(48, 36);
-            chxSi.TabIndex = 21;
+            chxSi.TabIndex = 5;
             chxSi.Text = "SI";
             chxSi.UseVisualStyleBackColor = true;
             // 
@@ -185,7 +209,8 @@
             txtCosto.Name = "txtCosto";
             txtCosto.PlaceholderText = "Costo del producto";
             txtCosto.Size = new Size(304, 33);
-            txtCosto.TabIndex = 18;
+            txtCosto.TabIndex = 3;
+            txtCosto.Leave += txtCosto_Leave;
             // 
             // label10
             // 
@@ -204,7 +229,7 @@
             cbxProveedor.Location = new Point(715, 44);
             cbxProveedor.Name = "cbxProveedor";
             cbxProveedor.Size = new Size(304, 40);
-            cbxProveedor.TabIndex = 15;
+            cbxProveedor.TabIndex = 1;
             // 
             // txtObservacion
             // 
@@ -215,7 +240,7 @@
             txtObservacion.Name = "txtObservacion";
             txtObservacion.PlaceholderText = "Datos que complementan";
             txtObservacion.Size = new Size(304, 33);
-            txtObservacion.TabIndex = 7;
+            txtObservacion.TabIndex = 10;
             // 
             // label9
             // 
@@ -237,7 +262,7 @@
             txtMarca.Name = "txtMarca";
             txtMarca.PlaceholderText = "Marca del producto";
             txtMarca.Size = new Size(304, 33);
-            txtMarca.TabIndex = 6;
+            txtMarca.TabIndex = 8;
             // 
             // label8
             // 
@@ -259,7 +284,8 @@
             txtIva.Name = "txtIva";
             txtIva.PlaceholderText = "Iva";
             txtIva.Size = new Size(304, 33);
-            txtIva.TabIndex = 5;
+            txtIva.TabIndex = 9;
+            txtIva.TextChanged += txtIva_TextChanged;
             // 
             // label7
             // 
@@ -281,7 +307,7 @@
             txtStock.Name = "txtStock";
             txtStock.PlaceholderText = "Stock";
             txtStock.Size = new Size(304, 33);
-            txtStock.TabIndex = 4;
+            txtStock.TabIndex = 7;
             // 
             // label6
             // 
@@ -314,7 +340,8 @@
             txtRecargo.Name = "txtRecargo";
             txtRecargo.PlaceholderText = "El Porcentaje de recargo";
             txtRecargo.Size = new Size(304, 33);
-            txtRecargo.TabIndex = 2;
+            txtRecargo.TabIndex = 4;
+            txtRecargo.TextChanged += txtRecargo_TextChanged;
             txtRecargo.Leave += txtRecargo_Leave;
             // 
             // txtDescripcion
@@ -326,7 +353,7 @@
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.PlaceholderText = "Nombre o Descripcion del Producto";
             txtDescripcion.Size = new Size(304, 33);
-            txtDescripcion.TabIndex = 1;
+            txtDescripcion.TabIndex = 2;
             // 
             // txtCodigo
             // 
@@ -390,7 +417,7 @@
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.Font = new Font("Dubai", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = Color.White;
-            btnSalir.Location = new Point(627, 483);
+            btnSalir.Location = new Point(629, 511);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(266, 81);
             btnSalir.TabIndex = 1;
@@ -403,7 +430,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(40, 40, 40);
-            ClientSize = new Size(1075, 595);
+            ClientSize = new Size(1075, 640);
             Controls.Add(btnSalir);
             Controls.Add(groupBox1);
             Controls.Add(label1);
@@ -448,5 +475,7 @@
         private TextBox txtCodProductoProveedor;
         private Label label13;
         private CheckBox chxSi;
+        private Label label14;
+        private TextBox txtPrecioFInal;
     }
 }
